@@ -1,0 +1,105 @@
+// Reset script for ADSP-CM41x, Cortex-M4 core.
+// Copyright (c) 2016 Analog Devices, Inc. All Rights Reserved.
+//
+// This script is for use with Segger JLink Lite emulators, to
+// connect to the Cortex-M4 core of the ADSP-CM41x processor.
+//
+// When the processor's security is enabled, debugger access is
+// disabled until secure keys are provided. If using custom key
+// values instead of the default key values, modify the values
+// passed by this script.
+// Note that there TWO sets of locations to change in this script 
+// - one for JTAG connections, and one for SWD connections.
+
+int GetScriptVersion(void) {
+  //
+  // Make sure that J-Link DLL does not ignore InitTraget() from script file
+  // Return values for Analog Devices:
+  //   <  100: Perform DLL internal connect sequence
+  //   >= 100: Perform InitTarget() from script file
+  //
+  return 100;                   
+}
+
+void ResetTarget(void) {
+  
+	JTAG_ResetPin=0;
+  SYS_Sleep(300);
+  JTAG_ResetPin=1;
+  SYS_Sleep(300);
+ // Report("CM41x_M4.JLinkScript-v1.0.0.0: Resetting and halting Cortex-M4 core.");
+}
+
+
+/*********************************************************************
+*
+*       _InitTargetSWD
+*
+**********************************************************************/
+int _InitTargetSWD(void) {
+	int r;
+  CPU                = CORTEX_M0;
+  JTAG_AllowTAPReset = 0;
+   // reset the board
+
+  //Report("CM41x_M4.JLinkScript-v1.0.0.0: SWD connection");
+  JTAG_ResetPin=0;
+  SYS_Sleep(30);
+  JTAG_ResetPin=1;
+  SYS_Sleep(30);
+
+ 
+  JLINK_CORESIGHT_WriteAP(JLINK_CORESIGHT_AP_REG_ADDR, 0x40000004);
+  JLINK_CORESIGHT_WriteAP(JLINK_CORESIGHT_AP_REG_DATA, 0x000000ff);   // don't vector flash
+  JLINK_CORESIGHT_WriteAP(JLINK_CORESIGHT_AP_REG_ADDR, 0x4000022C);
+  JLINK_CORESIGHT_WriteAP(JLINK_CORESIGHT_AP_REG_DATA, 0x00060020);   // don't vector flash
+  SYS_Sleep(1);
+
+
+ 
+  
+  //Report("CM41x_M4.JLinkScript-v1.0.0.0: SWD: send secure keys");
+
+  
+  return 0;
+}
+
+/*********************************************************************
+*
+*       _InitTargetJTAG
+*
+**********************************************************************/
+int _InitTargetJTAG(void) {
+  
+  return 0;
+}
+
+void InitTarget(void) {
+  int r;
+  int Speed;
+
+  Report("*********************************");
+  Report("* CM41x_M4.JLinkScript-v1.0.0.0 *");
+  Report("*********************************"); 
+  //
+  // Remember original target interface speed and set new one
+  //
+  Speed       = JTAG_Speed;
+  JTAG_Speed  = 0x1000;
+  //
+  // Perform target interface specific connect sequence
+  //
+  if (MAIN_ActiveTIF == JLINK_TIF_JTAG) {
+    r = _InitTargetJTAG();
+  } else {
+    r = _InitTargetSWD();
+  }
+  //
+  // Restore original target interface speed settings
+  //
+  JTAG_Speed = Speed;
+  return r;
+}
+
+
+
