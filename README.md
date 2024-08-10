@@ -34,8 +34,9 @@ Developping Kit and resources gathered while reverse engineering the chinese HFS
 <details>
 <summary> <font size="4"> <strong> 3. Board Schematic </strong> </font></summary>
 
-[EasyEDA Pro Project](resources/EasyEDA_ProProject_HFS-P3_schematic_2024-08-10.epro) of the Schematic
-[PDF ](resources/HFS-P3_rev_eng_schematic_2024-08-10.pdf) Schematic
+[EasyEDA Pro Project](resources/EasyEDA_ProProject_HFS-P3_schematic_2024-08-10.epro) of the Schematic  
+
+[PDF ](resources/HFS-P3_rev_eng_schematic_2024-08-10.pdf) Schematic  
 
 </details>
 
