@@ -154,18 +154,20 @@ The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** a
 ![alt text](img/SWD.png)
 Note: For some reason, SWD will not work if battery is desoldered. Connecting the 3.3v line to the +V input on the board will make it enter debug mode again.
 #### 2. Programmer & Software:
-I used a chinese ST-Link V2 clone with the firmware modified to work with [J-Link Commander](https://www.segger.com/downloads/jlink/). This was really messy<font color="red">*</font> so my recommandation is to use a proper [Segger JLink debug probe](https://www.segger.com/products/debug-probes/j-link/).
 
-<font color="red">*</font><sub>You need [SEGGER STLinkReflash Utility](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to flash `J-Link firmware` in place of `STLink` (same app will be able to restore it if ever needed). If the debugger is a chinese clone you might have to use a [patched](resources/STLinkReflash_190812) version of the reflash utility instead to bypass the error of the unsupported device.</sub></font>
+I used a chinese ST-Link V2 clone with the firmware modified to work with [J-Link Commander](https://www.segger.com/downloads/jlink/). This was really messy<sup><font color="red">*</font></sup> so my recommandation is to use a proper [Segger JLink debug probe](https://www.segger.com/products/debug-probes/j-link/).
 
 With an original J-Link debug probe you might be able to use any version of [J-Link Commander](https://www.segger.com/downloads/jlink/). For my clone, only a couple of versions seemed to have worked (v6.18c, v6.12).
 
+<font color="red">*</font><sub>You need [SEGGER STLinkReflash Utility](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to flash `J-Link firmware` in place of `STLink` (same app will be able to restore it if ever needed). If the debugger is a chinese clone you might have to use a [patched](resources/STLinkReflash_190812) version of the reflash utility instead to bypass the error of the unsupported device.</sub></font>
+
+:exclamation: Once J-Link is installed make sure to add the **Fudan Micro memory maps** according to [readme](resources/JFlash/Fudan%20Devices%20List/)
 
 #### 3. Dumping
 1. Connect the debug probe to the board
 2. Plug the USB inside the PC (currently only Windows 10/11 tested)
 3. Run `J-Link Commander` as Administrator
-4. Type `connect` -> choose `FM33LC04X` -> type `S` for SWD -> enter for default `4000KHz `speed. If any error at this point run `connect` again and agin until the debug probe succesfully halts the cpu and establishes a connection (see below).
+4. Type `connect` -> choose `FM33LC04X` (see [here](resources/JFlash/Fudan%20Devices%20List/) if FMSH is not in list) -> type `S` for SWD -> enter for default `4000KHz `speed. If any error at this point run `connect` again and agin until the debug probe succesfully halts the cpu and establishes a connection (see below).
 
 ![alt text](img/connect_jlink.png)
 
