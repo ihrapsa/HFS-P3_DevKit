@@ -1,6 +1,10 @@
 # HFS-P3_DevKit
 Developping Kit and resources gathered while reverse engineering the chinese HFS-P3 radiation dosimeter pen.
 
+https://github.com/user-attachments/assets/4a36b4d5-3909-4819-be21-2b176fe915f6
+
+:point_down: <sub>Eeach section can be expanded</sub> :point_down:
+
 <details>
 <summary> <font size="4"> <strong> 1. Device Pictures </strong> </font></summary>
 
