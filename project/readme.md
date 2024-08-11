@@ -1,6 +1,6 @@
 This is a Keil uVision project with the base generated on [MFANG online platform](https://mfang2.fmdevelopers.com.cn) with the following configuration:
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 |Pin#|GPIO|  Function  |Config|
 |----|----|------------|------|
@@ -20,3 +20,6 @@ This is a Keil uVision project with the base generated on [MFANG online platform
 Currently I can:
 -   control the OLED over bit-banged I2C (WIP- needs more polishing)
 -   blink LEDs
+
+[![video](img/video_thumbnail.png)](img/blinking_hecked.mp4)
+

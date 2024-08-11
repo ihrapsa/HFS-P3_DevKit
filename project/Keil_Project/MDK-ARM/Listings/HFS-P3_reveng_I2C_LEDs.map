@@ -1133,9 +1133,9 @@ Image Symbol Table
     __arm_cp.1_5                             0x00000c9c   Number         4  system_fm33lc0xx.o(.text.SystemInit)
     __arm_cp.1_6                             0x00000ca0   Number         4  system_fm33lc0xx.o(.text.SystemInit)
     [Anonymous Symbol]                       0x00000ca4   Section        0  main.o(.text.main)
-    __arm_cp.0_1                             0x00000d20   Number         4  main.o(.text.main)
-    __arm_cp.0_2                             0x00000d24   Number         4  main.o(.text.main)
-    .text_divfast                            0x00000d28   Section      502  aeabi_sdivfast.o(.text_divfast)
+    __arm_cp.0_1                             0x00000d10   Number         4  main.o(.text.main)
+    __arm_cp.0_2                             0x00000d14   Number         4  main.o(.text.main)
+    .text_divfast                            0x00000d18   Section      502  aeabi_sdivfast.o(.text_divfast)
     .bss                                     0x20000010   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000070   Data        2048  startup_fm33lc0xx.o(HEAP)
     HEAP                                     0x20000070   Section     2048  startup_fm33lc0xx.o(HEAP)
@@ -1300,14 +1300,14 @@ Image Symbol Table
     OLED_WriteDataList                       0x00000a41   Thumb Code    46  oled.o(.text.OLED_WriteDataList)
     SystemCoreClockUpdate                    0x00000a71   Thumb Code   268  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
     SystemInit                               0x00000bb1   Thumb Code   216  system_fm33lc0xx.o(.text.SystemInit)
-    main                                     0x00000ca5   Thumb Code   116  main.o(.text.main)
-    __aeabi_uidiv                            0x00000d29   Thumb Code    68  aeabi_sdivfast.o(.text_divfast)
-    __aeabi_idiv                             0x00000d6d   Thumb Code   434  aeabi_sdivfast.o(.text_divfast)
-    ASCII_0708                               0x00000f1e   Data         665  oled_draw.o(.rodata.ASCII_0708)
-    ASCII_1608                               0x000011b7   Data        1520  oled_draw.o(.rodata.ASCII_1608)
-    skull                                    0x000017a7   Data           8  oled_draw.o(.rodata.skull)
-    Region$$Table$$Base                      0x000017b0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000017d0   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000ca5   Thumb Code   100  main.o(.text.main)
+    __aeabi_uidiv                            0x00000d19   Thumb Code    68  aeabi_sdivfast.o(.text_divfast)
+    __aeabi_idiv                             0x00000d5d   Thumb Code   434  aeabi_sdivfast.o(.text_divfast)
+    ASCII_0708                               0x00000f0e   Data         665  oled_draw.o(.rodata.ASCII_0708)
+    ASCII_1608                               0x000011a7   Data        1520  oled_draw.o(.rodata.ASCII_1608)
+    skull                                    0x00001797   Data           8  oled_draw.o(.rodata.skull)
+    Region$$Table$$Base                      0x000017a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000017c0   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_fm33lc0xx.o(.data.SystemCoreClock)
     XTHFClock                                0x20000004   Data           4  system_fm33lc0xx.o(.data.XTHFClock)
     XTLFClock                                0x20000008   Data           4  system_fm33lc0xx.o(.data.XTLFClock)
@@ -1322,9 +1322,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000017e0, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000017d0, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000017d0, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000017c0, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1412,23 +1412,23 @@ Memory Map of the image
     0x00000a6e   0x00000a6e   0x00000002   PAD
     0x00000a70   0x00000a70   0x00000140   Code   RO          104    .text.SystemCoreClockUpdate  system_fm33lc0xx.o
     0x00000bb0   0x00000bb0   0x000000f4   Code   RO          106    .text.SystemInit    system_fm33lc0xx.o
-    0x00000ca4   0x00000ca4   0x00000084   Code   RO           35    .text.main          main.o
-    0x00000d28   0x00000d28   0x000001f6   Code   RO          669    .text_divfast       c_p.l(aeabi_sdivfast.o)
-    0x00000f1e   0x00000f1e   0x00000299   Data   RO           49    .rodata.ASCII_0708  oled_draw.o
-    0x000011b7   0x000011b7   0x000005f0   Data   RO           53    .rodata.ASCII_1608  oled_draw.o
-    0x000017a7   0x000017a7   0x00000008   Data   RO           50    .rodata.skull       oled_draw.o
-    0x000017af   0x000017af   0x00000001   PAD
-    0x000017b0   0x000017b0   0x00000020   Data   RO          913    Region$$Table       anon$$obj.o
+    0x00000ca4   0x00000ca4   0x00000074   Code   RO           35    .text.main          main.o
+    0x00000d18   0x00000d18   0x000001f6   Code   RO          669    .text_divfast       c_p.l(aeabi_sdivfast.o)
+    0x00000f0e   0x00000f0e   0x00000299   Data   RO           49    .rodata.ASCII_0708  oled_draw.o
+    0x000011a7   0x000011a7   0x000005f0   Data   RO           53    .rodata.ASCII_1608  oled_draw.o
+    0x00001797   0x00001797   0x00000008   Data   RO           50    .rodata.skull       oled_draw.o
+    0x0000179f   0x0000179f   0x00000001   PAD
+    0x000017a0   0x000017a0   0x00000020   Data   RO          913    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000017d0, Size: 0x00001070, Max: 0x00006000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000017c0, Size: 0x00001070, Max: 0x00006000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x000017d0   0x00000004   Data   RW          110    .data.SystemCoreClock  system_fm33lc0xx.o
-    0x20000004   0x000017d4   0x00000004   Data   RW          109    .data.XTHFClock     system_fm33lc0xx.o
-    0x20000008   0x000017d8   0x00000004   Data   RW          108    .data.XTLFClock     system_fm33lc0xx.o
-    0x2000000c   0x000017dc   0x00000004   PAD
+    0x20000000   0x000017c0   0x00000004   Data   RW          110    .data.SystemCoreClock  system_fm33lc0xx.o
+    0x20000004   0x000017c4   0x00000004   Data   RW          109    .data.XTHFClock     system_fm33lc0xx.o
+    0x20000008   0x000017c8   0x00000004   Data   RW          108    .data.XTLFClock     system_fm33lc0xx.o
+    0x2000000c   0x000017cc   0x00000004   PAD
     0x20000010        -       0x00000060   Zero   RW          775    .bss                c_p.l(libspace.o)
     0x20000070        -       0x00000800   Zero   RW            2    HEAP                startup_fm33lc0xx.o
     0x20000870        -       0x00000800   Zero   RW            1    STACK               startup_fm33lc0xx.o
@@ -1443,16 +1443,16 @@ Image component sizes
 
        106         12          0          0          0       3956   fm33lc0xx_fl.o
        244         12          0          0          0       7751   fm33lc0xx_fl_gpio.o
-       272          4          0          0          0       2901   i2c_bitbang.o
-       132         16          0          0          0       1495   main.o
+       272          4          0          0          0       2894   i2c_bitbang.o
+       116         16          0          0          0       1470   main.o
        400         20          0          0          0       5751   mf_config.o
        998          4          0          0          0       5433   oled.o
-        96         12       2193          0          0       1992   oled_draw.o
+        96         12       2193          0          0       1985   oled_draw.o
         56         26        192          0       4096        748   startup_fm33lc0xx.o
        564        104          0         12          0       3083   system_fm33lc0xx.o
 
     ----------------------------------------------------------------------
-      2876        210       2418         12       4100      33110   Object Totals
+      2860        210       2418         12       4100      33071   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          8          0          1          0          4          0   (incl. Padding)
 
@@ -1502,15 +1502,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3678        228       2418         12       4196      33534   Grand Totals
-      3678        228       2418         12       4196      33534   ELF Image Totals
-      3678        228       2418         12          0          0   ROM Totals
+      3662        228       2418         12       4196      33495   Grand Totals
+      3662        228       2418         12       4196      33495   ELF Image Totals
+      3662        228       2418         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 6096 (   5.95kB)
+    Total RO  Size (Code + RO Data)                 6080 (   5.94kB)
     Total RW  Size (RW Data + ZI Data)              4208 (   4.11kB)
-    Total ROM Size (Code + RO Data + RW Data)       6108 (   5.96kB)
+    Total ROM Size (Code + RO Data + RW Data)       6092 (   5.95kB)
 
 ==============================================================================
 
