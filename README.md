@@ -41,9 +41,11 @@ Developping Kit and resources gathered while reverse engineering the chinese HFS
 </details>
 
 <details>
-<summary> <font size="4"> <strong> 4. MCU Specs & GPIOs </strong> </font></summary>
+<summary> <font size="4"> <strong> 4. MCU Specs & GPIOs </strong> </font></summary>  
 
-The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** and **24KB of SRAM** in a QFN32 form. 32 pins, 28 GPIOs, (of which 1xSWD, 2xSPIs and 4/2 UART/LPUART interfaces, 9x12bit SAR-ADC channels) and an internal temperature sensor. It lacks USB support and I2C so that latter needs to be bitbanged (as it will be required for oled driver communication).
+Check __datasheet__ [here](resources/FUDAN-MICRO-FM33LC0xx_v2021.09_datasheet.pdf).  
+
+The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** and **24KB of SRAM** in a QFN32 form. It has 32 pins with 28 GPIOs, (of which 1xSWD, 2xSPIs and 4/2 UART/LPUART interfaces, 9x12bit SAR-ADC channels) and an internal temperature sensor. It lacks USB support and I2C so the latter needs to be bit-banged (as it will be required for oled driver communication).
 
 
 - <details>
@@ -77,16 +79,50 @@ The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** a
     </details>
 
 - <details>
-    <summary><strong> MCU Pinout </strong></summary>
+    <summary><strong> MCU Pinout: </strong></summary>
 
     ![MCU pinout](img/FM33LC0x3N.png)
 
   </details>
 
+- <details>
+    <summary><strong>HFS-P3 Pinout: </strong></summary>
 
-On the HFS-P3 board the MCU has the following GPIOs connections:
+    - On the HFS-P3 board the MCU has the following GPIOs connections:
 
+      |Pin#|GPIO|  Function  |Config|
+      |----|----|------------|------|
+      |1   |**PD8** | SWD SWDIO  |
+      |2   |**NRST**| Global Reset|
+      |3   |**PA13**| OLED Reset |output
+      |4   |**PA14**|GM Tube     |
+      |5   |PA15|NC          |
+      |6   |**PA8** |GM Tube?    |
+      |7   |PA9 |NC          |
+      |8   |PA10|NC          |
+      |9   |**PB2** |PWR button (WKUP2)|
+      |10  |**PB3** |BMS?        |
+      |11  |**PB8** |BMS?        |
+      |12  |PB9 |NC          |
+      |13  |PB10|NC          |
+      |14  |**PB11**|BUZZER      |
+      |15  |PB13|NC          |
+      |... |... |NC          |
+      |20  |PC5 |NC          |
+      |21  |**PC8** |BMS?        |
+      |22  |PC9 |NC          |
+      |23  |**PC10**|MENU button |
+      |24  |**PD9** | LED1(red)  |output
+      |25  |**PD10**| LED2(green)|output
+      |26  |VDD15|LDO output |
+      |27  |VSS |Ground      |
+      |28  |VDD |Source      |
+      |29  |**PD11**|RCC_FOUT0 (clock frequency output)|
+      |30  |**PD0** |OLED SDA    |output
+      |31  |**PD1** |OLED SCL    |output
+      |32  |**PD7** |SWD SWCLK   |
 
+  </details>
 
 </details>
 
