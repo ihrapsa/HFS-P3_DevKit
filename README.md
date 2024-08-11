@@ -141,8 +141,10 @@ The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** a
 
 
 ---------------------
+### I. Prepairing
+<details>
+    <summary>Click to Expand</summary>
 
-### Prepairing
 
 #### 1. Wiring:
 ![alt text](img/SWD.png)
@@ -150,7 +152,7 @@ Note: For some reason, SWD will not work if battery is desoldered. Connecting th
 #### 2. Programmer & Software:
 I used a chinese ST-Link V2 clone with the firmware modified to work with [J-Link Commander](https://www.segger.com/downloads/jlink/). This was really messy<font color="red">*</font> so my recommandation is to use a proper [Segger JLink debug probe](https://www.segger.com/products/debug-probes/j-link/).
 
-<font color="red">*</font><font size="2">You need [SEGGER STLinkReflash Utility](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to flash `J-Link firmware` in place of `STLink` (same app will be able to restore it if ever needed). If the debugger is a chinese clone you might have to use a [patched](resources/STLinkReflash_190812) version of the reflash utility instead to bypass the error of the unsupported device.</font>
+<font color="red">*</font><sub>You need [SEGGER STLinkReflash Utility](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to flash `J-Link firmware` in place of `STLink` (same app will be able to restore it if ever needed). If the debugger is a chinese clone you might have to use a [patched](resources/STLinkReflash_190812) version of the reflash utility instead to bypass the error of the unsupported device.</sub></font>
 
 With an original J-Link debug probe you might be able to use any version of [J-Link Commander](https://www.segger.com/downloads/jlink/). For my clone, only a couple of versions seemed to have worked (v6.18c, v6.12).
 
@@ -175,7 +177,9 @@ savebin C:\path\where\to\dump.bin, 0x0, 40000
 
 #### 4. Downloading to Flash
 
-To Download a binary to flash use the `loadbin` command:
+<sub>You can either use *J-Link commander* or *Keil uVision MDK-ARM*. The latter will be described later.</sub>
+
+To Download a binary to flash with *J-Link Commander* use the `loadbin` command:
 
 `loadbin <filename>, <addr>`
 ```
@@ -183,3 +187,25 @@ loadbin C:\path\of\the\file_to_flash.bin, 0x0
 ```
 
 ![alt text](img/loadbin_jlink.png)
+
+</details>
+
+### II. IDE Setup (Keil µVision 5 MDK-ARM)
+<details>
+    <summary>Click to Expand</summary>
+
+- Download and Install the [MDK-ARM software](https://www.keil.com/demo/eval/arm.htm#/DOWNLOAD)
+- Open project: `/project/Keil_Project/MDK-ARM/*.uvoptx`
+- Make sure compiler is selected in project options `Project` -> `Options for Target ...`, under `Target` tab:
+![alt text](img/project_options.png)
+- Make sure `JLINK` is selected as debugger in `Debug` tab.
+![alt text](img/project_options_debug.png)
+- Compile using upper left `Build` icon
+![alt text](img/build.png)
+- Upload/Download to Flash using upper left `Download` icon:
+![alt text](img/download.png)  
+
+:exclamation:__*Note:*__
+Sometimes, in my case, I had to start `J-Link Commander`, establish a connection with it and only then Keil uVision would detect the MCU.
+
+</details>
