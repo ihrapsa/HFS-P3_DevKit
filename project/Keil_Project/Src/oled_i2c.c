@@ -1,4 +1,4 @@
-#include "I2C_bitbang.h"
+#include "i2c_bitbang.h"
 
 #define OLED_ADDRESS 0x3C  // Typical address for SSD1316, might be different
 #define OLED_RESET_PIN FL_GPIO_PIN_13  
@@ -230,4 +230,3 @@ void OLED_TestPattern(void)
     }
 }
 */
-

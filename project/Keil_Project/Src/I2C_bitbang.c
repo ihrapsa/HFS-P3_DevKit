@@ -1,16 +1,7 @@
-#include "I2C_bitbang.h"
+#include "i2c_bitbang.h"
 
 void I2C_Init(void)
-{
-    FL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-    
-    GPIO_InitStruct.pin = I2C_SDA_PIN | I2C_SCL_PIN;
-    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
-    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_OPENDRAIN;
-    GPIO_InitStruct.pull = FL_DISABLE;
-    GPIO_InitStruct.remapPin = FL_DISABLE;
-    FL_GPIO_Init(I2C_GPIO, &GPIO_InitStruct);
-    
+{    
     I2C_SDA_HIGH();
     I2C_SCL_HIGH();
 }

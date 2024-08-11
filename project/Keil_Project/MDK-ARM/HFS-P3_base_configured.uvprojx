@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>HFS-P3_reveng_I2C_LEDs</TargetName>
+      <TargetName>HFS-P3_base_configured</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pArmCC>6220000::V6.22::ARMCLANG</pArmCC>
@@ -50,7 +50,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>HFS-P3_reveng_I2C_LEDs</OutputName>
+          <OutputName>HFS-P3_base_configured</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -416,19 +416,54 @@
               <FilePath>../Inc/fm33_assert.h</FilePath>
             </File>
             <File>
-              <FileName>oled_draw.c</FileName>
+              <FileName>i2c_bitbang.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Src\oled_draw.c</FilePath>
+              <FilePath>..\Src\i2c_bitbang.c</FilePath>
             </File>
             <File>
-              <FileName>OLED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\OLED.c</FilePath>
+              <FileName>i2c_bitbang.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\i2c_bitbang.h</FilePath>
             </File>
             <File>
-              <FileName>I2C_bitbang.c</FileName>
+              <FileName>inputs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\inputs.h</FilePath>
+            </File>
+            <File>
+              <FileName>leds.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\leds.h</FilePath>
+            </File>
+            <File>
+              <FileName>outputs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\outputs.h</FilePath>
+            </File>
+            <File>
+              <FileName>buzzer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Src\I2C_bitbang.c</FilePath>
+              <FilePath>..\Src\buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\buzzer.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>oled_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\oled_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\oled_i2c.h</FilePath>
             </File>
             <File>
               <FileName>oled_draw.h</FileName>
@@ -436,24 +471,9 @@
               <FilePath>..\Inc\oled_draw.h</FilePath>
             </File>
             <File>
-              <FileName>oled_bitmap.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\oled_bitmap.h</FilePath>
-            </File>
-            <File>
-              <FileName>OLED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\OLED.h</FilePath>
-            </File>
-            <File>
-              <FileName>I2C_bitbang.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\I2C_bitbang.h</FilePath>
-            </File>
-            <File>
-              <FileName>LEDs.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\LEDs.h</FilePath>
+              <FileName>oled_draw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\oled_draw.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -621,14 +641,5 @@
     <components/>
     <files/>
   </RTE>
-
-  <LayerInfo>
-    <Layers>
-      <Layer>
-        <LayName>HFS-P3_reveng_I2C_LEDs</LayName>
-        <LayPrjMark>1</LayPrjMark>
-      </Layer>
-    </Layers>
-  </LayerInfo>
 
 </Project>

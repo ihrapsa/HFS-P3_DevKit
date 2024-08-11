@@ -1,4 +1,4 @@
-#include "OLED.h"
+#include "oled_i2c.h"
 #include "oled_draw.h"
 
 void OLED_ShowChar(uint8_t x, uint8_t y, char ch, uint8_t Size)

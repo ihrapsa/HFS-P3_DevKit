@@ -21,16 +21,17 @@
 
 #include "main.h"
 #include "fm33_assert.h"
-#include "I2C_bitbang.h"
-#include "oled.h"
-#include "oled_draw.h"
-#include "LEDs.h"
-
+#include "leds.h"
+#include "inputs.h"
+#include "outputs.h"
+#include "buzzer.h"
+#include "oled_i2c.h"
+#include "oled_Draw.h"
 
 /**    
 * Chip Series: FM33LC0xx;
 * FL Version: v2.3;
-* Project Name: HFS-P3_reveng_I2C_LEDs;
+* Project Name: HFS-P3_base_configured;
 * Project Version: v2.3.0.0;
 * Project ID: 1804577435702308865;
 * Create Date: 2024-06-23;
@@ -45,42 +46,61 @@ int main(void)
     /* Configure the system clock */
     MF_Clock_Init();
     
-   
-    /* Initialize all configured peripherals */
+    /* Initialize all configured peripherals including SWD, all GPIOs, I2C soft pins, WKUP2  */
     MF_Config_Init();
 	
-	  /* Initialize I2C */
-    I2C_Init();
-    
-    /* Initialize OLED */
+	
+		/* Initialize OLED */
 		OLED_HardwareReset();  // Perform hardware reset first
 		OLED_Init();
-		//OLED_Init2();
-		//OLED_SetPosition(0, 0);
 		OLED_Clear();
-		//OLED_WriteDataList(ALPHABET, sizeof(ALPHABET));
-		//OLED_ShowChar(10,10,'Q',12);
-		//OLED_StartPosition();
-		OLED_ShowText(10,10,"Hecked ",7);
-		OLED_WriteDataList(skull, sizeof(skull));
 
-    
-		while(1)
-    {     
-			/*
-				OLED_FillScreen(0xAA);  // 10101010 pattern
-        FL_DelayMs(1000);
-        OLED_FillScreen(0x55);  // 01010101 pattern
-        FL_DelayMs(1000);
-			*/
-			LED1_ON();
-			FL_DelayMs(1000);
-			LED1_OFF();
+
+    while(1)
+    {
+			if(READ_POWER_PIN() == 0)
+				{
+					if(READ_POWER_EN() == 0)
+					{
+						POWER_EN_ON(); //Enable battery source
+						play_beep(); //Play a beep
+						LED2_ON(); //Turn on Green LED
+						FL_DelayMs(1000);
+						LED2_OFF();
+					}
+					else if(READ_POWER_EN() == 1)
+					{
+						play_beep(); //play a goodbye beep
+						FL_DelayMs(500);
+						play_beep();
+						POWER_EN_OFF(); //Disable battery source
+					}
+				}
 			
-			LED2_ON();
-			FL_DelayMs(1000);
-			LED2_OFF();
-
+			// Check if button is pressed (active low because of pull-up)
+			if(READ_MENU_PIN() == 0)
+			{	
+				
+				// Infinite beep loop
+				int t = 1;
+				while(t == 1)
+				{
+					if(READ_MENU_PIN() == 0) //Exit loop if button pressed again - WIP not working
+					{
+						t = 0;
+					}
+					play_beep();
+					LED1_ON(); //LED1 red in sync with beep
+					FL_DelayMs(500);
+					
+					play_beep();
+					LED1_OFF();
+					FL_DelayMs(1000);
+							
+					OLED_ShowText(10,10,"Hecked ",7);
+					OLED_WriteDataList(skull, sizeof(skull));
+				}
+			}
     }
 
 }

@@ -27,6 +27,7 @@ Currently I can:
 -   control the OLED over bit-banged I2C (WIP- needs more polishing)
 -   blink LEDs
 -   use buttons GPIO inputs
+-   control Buzzer
 
 
 https://github.com/user-attachments/assets/4a36b4d5-3909-4819-be21-2b176fe915f6

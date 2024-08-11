@@ -1,6 +1,5 @@
-
-#ifndef OLED_H
-#define OLED_H
+#ifndef __OLED_I2C_H__
+#define __OLED_I2C_H__
 
 #include "fm33lc0xx_fl_gpio.h"
 
@@ -20,4 +19,4 @@ void OLED_Clear(void);
 
 void OLED_StartPosition(void);
 
-#endif // OLED_H
+#endif // __OLED_I2C_H__

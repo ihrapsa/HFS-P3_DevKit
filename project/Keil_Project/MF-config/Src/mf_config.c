@@ -33,7 +33,63 @@ void MF_GPIO_Init(void)
 {
     FL_GPIO_InitTypeDef    GPIO_InitStruct;
 
-    /* PD0 OUTPUT */ 
+    /* PA8 INPUT (GM_pulse) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_8;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_INPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_ENABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* PA13 OUTPUT (RST_soft_I2C) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_13;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_ENABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* PA14 OUTPUT (HV_PSU) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_14;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_DISABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* PB3 OUTPUT (POWER_EN) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_3;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_DISABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* PB8 INPUT (USB_sense) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_8;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_INPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_DISABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* PB11 OUTPUT (BUZZER) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_11;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_DISABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* PC10 INPUT (MENU_button) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_10;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_INPUT;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_ENABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    /* PD0 OUTPUT (SDA_soft_I2C) */ 
     GPIO_InitStruct.pin = FL_GPIO_PIN_0;
     GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_OPENDRAIN;
@@ -41,7 +97,7 @@ void MF_GPIO_Init(void)
     GPIO_InitStruct.remapPin = FL_DISABLE;
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-    /* PD1 OUTPUT */ 
+    /* PD1 OUTPUT (SCL_soft_I2C) */ 
     GPIO_InitStruct.pin = FL_GPIO_PIN_1;
     GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_OPENDRAIN;
@@ -49,7 +105,7 @@ void MF_GPIO_Init(void)
     GPIO_InitStruct.remapPin = FL_DISABLE;
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-    /* PD9 OUTPUT */ 
+    /* PD9 OUTPUT (LED1_red) */ 
     GPIO_InitStruct.pin = FL_GPIO_PIN_9;
     GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
@@ -57,21 +113,13 @@ void MF_GPIO_Init(void)
     GPIO_InitStruct.remapPin = FL_DISABLE;
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-    /* PD10 OUTPUT */ 
+    /* PD10 OUTPUT (LED2_green) */ 
     GPIO_InitStruct.pin = FL_GPIO_PIN_10;
     GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
     GPIO_InitStruct.pull = FL_DISABLE;
     GPIO_InitStruct.remapPin = FL_DISABLE;
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);    
-		
-		/* PA13 OUTPUT */ 
-    GPIO_InitStruct.pin = FL_GPIO_PIN_13;
-    GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
-    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
-    GPIO_InitStruct.pull = FL_DISABLE;
-    GPIO_InitStruct.remapPin = FL_DISABLE;
-    FL_GPIO_Init(GPIOA, &GPIO_InitStruct);  
 }
  
 /**
@@ -92,6 +140,60 @@ void MF_RCC_FOUT0_Init(void)
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
     FL_GPIO_SetFOUT0(GPIO, FL_GPIO_FOUT0_SELECT_AHBCLK_DIV64);    
+}
+ 
+/**
+  * @brief  ADC_Common Initialization function
+  * @param  void
+  * @retval None
+  */
+void MF_ADC_Common_Init(void)
+{
+    FL_ADC_CommonInitTypeDef    Common_InitStruct;
+
+    Common_InitStruct.clockSource = FL_RCC_ADC_CLK_SOURCE_RCHF;
+    Common_InitStruct.clockPrescaler = FL_RCC_ADC_PSC_DIV1;
+
+    FL_ADC_CommonInit(&Common_InitStruct);    
+}
+ 
+/**
+  * @brief  ADC_Sampling Initialization function
+  * @param  void
+  * @retval None
+  */
+void MF_ADC_Sampling_Init(void)
+{
+    FL_GPIO_InitTypeDef    GPIO_InitStruct;
+
+    FL_ADC_InitTypeDef    Sampling_InitStruct;
+
+    /* PC8 ADC_IN9 (BATT_ADC_IN9) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_8;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_ANALOG;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_DISABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    Sampling_InitStruct.conversionMode = FL_ADC_CONV_MODE_SINGLE;
+    Sampling_InitStruct.autoMode = FL_ADC_SINGLE_CONV_MODE_AUTO;
+    Sampling_InitStruct.waitMode = FL_ENABLE;
+    Sampling_InitStruct.overrunMode = FL_ENABLE;
+    Sampling_InitStruct.scanDirection = FL_ADC_SEQ_SCAN_DIR_FORWARD;
+    Sampling_InitStruct.externalTrigConv = FL_ADC_TRIGGER_EDGE_NONE;
+    Sampling_InitStruct.triggerSource = FL_ADC_TRGI_PA8;
+    Sampling_InitStruct.fastChannelTime = FL_ADC_FAST_CH_SAMPLING_TIME_4_ADCCLK;
+    Sampling_InitStruct.lowChannelTime = FL_ADC_SLOW_CH_SAMPLING_TIME_192_ADCCLK;
+    Sampling_InitStruct.oversamplingMode = FL_ENABLE;
+    Sampling_InitStruct.overSampingMultiplier = FL_ADC_OVERSAMPLING_MUL_16X;
+    Sampling_InitStruct.oversamplingShift = FL_ADC_OVERSAMPLING_SHIFT_4B;
+
+    FL_ADC_Init(ADC, &Sampling_InitStruct);
+
+    FL_ADC_EnableSequencerChannel(ADC, FL_ADC_INTERNAL_VREF1P2);
+
+    FL_ADC_EnableSequencerChannel(ADC, FL_ADC_EXTERNAL_CH9);    
 }
  
 /**
@@ -120,6 +222,30 @@ void MF_SWD_IO_Init(void)
     FL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
     
+}
+ 
+/**
+  * @brief  WKUP Initialization function
+  * @param  void
+  * @retval None
+  */
+void MF_WKUP_Init(void)
+{
+    FL_GPIO_InitTypeDef    GPIO_InitStruct;
+
+    FL_WKUP_InitTypeDef    WKUP_InitStruct;
+
+    /* PB2 WKUP_WKUP2 (POWER_button) */ 
+    GPIO_InitStruct.pin = FL_GPIO_PIN_2;
+    GPIO_InitStruct.mode = FL_GPIO_MODE_DIGITAL;
+    GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;
+    GPIO_InitStruct.pull = FL_ENABLE;
+    GPIO_InitStruct.remapPin = FL_DISABLE;
+    FL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    WKUP_InitStruct.polarity = FL_GPIO_WAKEUP_TRIGGER_FALLING;
+
+    FL_WKUP_Init(&WKUP_InitStruct, FL_GPIO_WAKEUP_2);    
 }
 
 /**
@@ -181,8 +307,15 @@ void MF_Config_Init(void)
     /* Initial GPIO */
     MF_GPIO_Init();
 
+    /* Initial ADC */
+    MF_ADC_Common_Init();
+    MF_ADC_Sampling_Init();
+
     /* Initial SWD */
     MF_SWD_IO_Init();
+
+    /* Initial WKUP */
+    MF_WKUP_Init();
 }
 
 

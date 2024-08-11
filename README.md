@@ -42,6 +42,8 @@ https://github.com/user-attachments/assets/4a36b4d5-3909-4819-be21-2b176fe915f6
 
 [PDF ](resources/HFS-P3_rev_eng_schematic_2024-08-10.pdf) Schematic  
 
+Ignore components values since they are not measured/correct.  
+
 </details>
 
 <details>

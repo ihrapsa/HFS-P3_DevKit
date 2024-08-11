@@ -1,5 +1,5 @@
-./objects/oled.o: ..\Src\OLED.c ..\Inc\I2C_bitbang.h ..\Inc\main.h \
-  ..\MF-config\Inc\mf_config.h \
+./objects/oled_i2c.o: ..\Src\oled_i2c.c ..\Inc\i2c_bitbang.h \
+  ..\Inc\main.h ..\MF-config\Inc\mf_config.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_conf.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_adc.h \

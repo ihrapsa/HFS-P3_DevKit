@@ -1,5 +1,5 @@
-./objects/i2c_bitbang.o: ..\Src\i2c_bitbang.c ..\Inc\i2c_bitbang.h \
-  ..\Inc\main.h ..\MF-config\Inc\mf_config.h \
+./objects/buzzer.o: ..\Src\buzzer.c ..\Inc\buzzer.h ..\Inc\main.h \
+  ..\MF-config\Inc\mf_config.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_conf.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_adc.h \
@@ -36,4 +36,4 @@
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h \
-  ..\Inc\fm33_assert.h
+  ..\Inc\fm33_assert.h ..\Inc\outputs.h

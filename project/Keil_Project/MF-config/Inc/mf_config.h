@@ -40,7 +40,10 @@ void MF_Config_Init(void);
 void Error_Handler(void);
 void MF_RCC_FOUT0_Init(void);
 void MF_GPIO_Init(void);
+void MF_ADC_Common_Init(void);
+void MF_ADC_Sampling_Init(void);
 void MF_SWD_IO_Init(void);
+void MF_WKUP_Init(void);
 
 
 /* Private defines -----------------------------------------------------------*/

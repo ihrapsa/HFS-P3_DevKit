@@ -2,6 +2,10 @@
 #include "fm33_assert.h"
 #include "fm33lc0xx_fl_gpio.h"
 
+#ifndef __I2C_BITBANG_H__
+#define __I2C_BITANG_H__
+
+
 #define I2C_SDA_PIN     FL_GPIO_PIN_0
 #define I2C_SCL_PIN     FL_GPIO_PIN_1
 #define I2C_GPIO        GPIOD
@@ -13,10 +17,6 @@
 #define I2C_SDA_READ()  FL_GPIO_GetInputPin(I2C_GPIO, I2C_SDA_PIN)
 
 #define I2C_DELAY()     FL_DelayUs(5)  // Adjust delay as needed
-
-
-#ifndef I2C_BITBANG_H
-#define I2C_BITBANG_H
 
 void I2C_Init(void);
 void I2C_Start(void);

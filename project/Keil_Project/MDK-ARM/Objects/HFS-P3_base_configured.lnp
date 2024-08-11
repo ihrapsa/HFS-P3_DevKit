@@ -2,9 +2,10 @@
 ".\objects\startup_fm33lc0xx.o"
 ".\objects\mf_config.o"
 ".\objects\main.o"
-".\objects\oled_draw.o"
-".\objects\oled.o"
 ".\objects\i2c_bitbang.o"
+".\objects\buzzer.o"
+".\objects\oled_i2c.o"
+".\objects\oled_draw.o"
 ".\objects\system_fm33lc0xx.o"
 ".\objects\fm33lc0xx_fl_exti.o"
 ".\objects\fm33lc0xx_fl_u7816.o"
@@ -34,7 +35,7 @@
 ".\objects\fm33lc0xx_fl_comp.o"
 ".\objects\fm33lc0xx_fl_opa.o"
 ".\objects\fm33lc0xx_fl_aes.o"
---strict --scatter ".\Objects\HFS-P3_reveng_I2C_LEDs.sct"
+--strict --scatter ".\Objects\HFS-P3_base_configured.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list ".\Listings\HFS-P3_reveng_I2C_LEDs.map" -o .\Objects\HFS-P3_reveng_I2C_LEDs.axf
+--list ".\Listings\HFS-P3_base_configured.map" -o .\Objects\HFS-P3_base_configured.axf
