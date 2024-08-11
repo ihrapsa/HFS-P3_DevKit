@@ -98,32 +98,32 @@ The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** a
       |----|----|------------|------|
       |1   |**PD8** | SWD SWDIO  |
       |2   |**NRST**| Global Reset|
-      |3   |**PA13**| OLED Reset |output
-      |4   |**PA14**|GM Tube     |
+      |3   |**PA13**| OLED Reset |output, internal pull-up
+      |4   |**PA14**|HV PSU? | output, internal pull-down
       |5   |PA15|NC          |
-      |6   |**PA8** |GM Tube?    |
+      |6   |**PA8** |GM pulse| input, external pull-up
       |7   |PA9 |NC          |
       |8   |PA10|NC          |
-      |9   |**PB2** |PWR button (WKUP2)|
-      |10  |**PB3** |BMS?        |
-      |11  |**PB8** |BMS?        |
+      |9   |**PB2** |PWR button (WKUP2)| WKUP2, internal pull-up, falling edge
+      |10  |**PB3** |PWR Enable  | output, internal pull-down
+      |11  |**PB8** |USB sense   | input, internal pull-down
       |12  |PB9 |NC          |
       |13  |PB10|NC          |
-      |14  |**PB11**|BUZZER      |
+      |14  |**PB11**|BUZZER  | output, internal pull-down
       |15  |PB13|NC          |
       |... |... |NC          |
       |20  |PC5 |NC          |
-      |21  |**PC8** |BMS?        |
+      |21  |**PC8** |BATT voltage| input, ADC_IN9
       |22  |PC9 |NC          |
-      |23  |**PC10**|MENU button |
-      |24  |**PD9** | LED1(red)  |output
-      |25  |**PD10**| LED2(green)|output
+      |23  |**PC10**|MENU button |input, internal pull-up
+      |24  |**PD9** | LED1(red)  |output, internal pull-down
+      |25  |**PD10**| LED2(green)|output, interanl pull-down
       |26  |VDD15|LDO output |
       |27  |VSS |Ground      |
       |28  |VDD |Source      |
       |29  |**PD11**|RCC_FOUT0 (clock frequency output)|
-      |30  |**PD0** |OLED SDA    |output
-      |31  |**PD1** |OLED SCL    |output
+      |30  |**PD0** |OLED SDA    |output, open drain, external pull-up
+      |31  |**PD1** |OLED SCL    |output, open drain, external pull-up
       |32  |**PD7** |SWD SWCLK   |
 
   </details>
@@ -152,7 +152,7 @@ The **FM33LC043N** is a low power 64MHz Arm Cortex M0 MCU with **256KB Flash** a
 
 #### 1. Wiring:
 ![alt text](img/SWD.png)
-Note: For some reason, SWD will not work if battery is desoldered. Connecting the 3.3v line to the +V input on the board will make it enter debug mode again.
+Note: SWD will not work if battery is desoldered. Connecting the 3.3v line to the +V input on the board will make it enter debug mode again.
 #### 2. Programmer & Software:
 
 I used a chinese ST-Link V2 clone with the firmware modified to work with [J-Link Commander](https://www.segger.com/downloads/jlink/). This was really messy<sup><font color="red">*</font></sup> so my recommandation is to use a proper [Segger JLink debug probe](https://www.segger.com/products/debug-probes/j-link/).
