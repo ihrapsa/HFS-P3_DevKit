@@ -203,7 +203,7 @@ loadbin C:\path\of\the\file_to_flash.bin, 0x0
     <summary>Click to Expand</summary>
 
 - Download and Install the [MDK-ARM software](https://www.keil.com/demo/eval/arm.htm#/DOWNLOAD)
-- Open project: `/project/Keil_Project/MDK-ARM/*.uvoptx`
+- Open project: `/project/Keil_Project/MDK-ARM/*.uvprojx`
 - Make sure compiler is selected in project options `Project` -> `Options for Target ...`, under `Target` tab:
 ![alt text](img/project_options.png)
 - Make sure `JLINK` is selected as debugger in `Debug` tab.

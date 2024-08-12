@@ -49,7 +49,7 @@ void MF_GPIO_Init(void)
     GPIO_InitStruct.remapPin = FL_DISABLE;
     FL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-    /* PA14 OUTPUT (HV_PSU) */ 
+    /* PA14 OUTPUT (HV_EN) */ 
     GPIO_InitStruct.pin = FL_GPIO_PIN_14;
     GPIO_InitStruct.mode = FL_GPIO_MODE_OUTPUT;
     GPIO_InitStruct.outputType = FL_GPIO_OUTPUT_PUSHPULL;

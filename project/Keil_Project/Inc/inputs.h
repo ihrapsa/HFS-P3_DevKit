@@ -4,12 +4,12 @@
 //MENU button pin
 #define MENU_GPIO   GPIOC
 #define MENU_PIN    FL_GPIO_PIN_10 
-#define READ_MENU_PIN()   FL_GPIO_GetInputPin(MENU_GPIO, MENU_PIN)
+#define READ_MENU_BTN()   FL_GPIO_GetInputPin(MENU_GPIO, MENU_PIN)
 
 //POWER button pin
 #define POWER_GPIO   GPIOB
 #define POWER_PIN    FL_GPIO_PIN_2 
-#define READ_POWER_PIN()   FL_GPIO_GetInputPin(POWER_GPIO, POWER_PIN)
+#define READ_POWER_BTN()   FL_GPIO_GetInputPin(POWER_GPIO, POWER_PIN)
 
 //GM pulse pin
 #define GM_PULSE_GPIO   GPIOA

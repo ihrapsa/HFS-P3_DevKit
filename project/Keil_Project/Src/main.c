@@ -58,7 +58,7 @@ int main(void)
 
     while(1)
     {
-			if(READ_POWER_PIN() == 0)
+			if(READ_POWER_BTN() == 0)
 				{
 					if(READ_POWER_EN() == 0)
 					{

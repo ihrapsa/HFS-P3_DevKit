@@ -20,13 +20,13 @@
 #define READ_BUZZER()	FL_GPIO_GetOutputPin(BUZZER_GPIO, BUZZER_PIN)
 
 
-//High Voltage PSU Pin
-#define HV_PSU_GPIO   GPIOA
-#define HV_PSU_PIN    FL_GPIO_PIN_14
+//High Voltage Enabling Pin 
+#define HV_EN_GPIO   GPIOA
+#define HV_EN_PIN    FL_GPIO_PIN_14
 
-#define HV_PSU_OFF() 	FL_GPIO_ResetOutputPin(HV_PSU_GPIO, HV_PSU_PIN) // ?
-#define HV_PSU_ON()  	FL_GPIO_SetOutputPin(HV_PSU_GPIO, HV_PSU_PIN) // ?
-#define READ_HV_PSU()	FL_GPIO_GetOutputPin(HV_PSU_GPIO, HV_PSU_PIN)
+#define HV_EN_OFF() 	FL_GPIO_ResetOutputPin(HV_EN_GPIO, HV_EN_PIN) // Will turn off LM3478 controller for HV generation
+#define HV_EN_ON()  	FL_GPIO_SetOutputPin(HV_EN_GPIO, HV_EN_PIN) // Will turn on LM3478 controller for HV generation
+#define READ_HV_EN()	FL_GPIO_GetOutputPin(HV_EN_GPIO, HV_EN_PIN)
 
 
 #endif
