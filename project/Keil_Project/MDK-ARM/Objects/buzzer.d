@@ -36,4 +36,4 @@
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h \
-  ..\Inc\fm33_assert.h ..\Inc\outputs.h
+  ..\Inc\fm33_assert.h ..\Inc\outputs.h ..\Inc\leds.h

@@ -416,9 +416,29 @@
               <FilePath>../Inc/fm33_assert.h</FilePath>
             </File>
             <File>
+              <FileName>buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\buzzer.c</FilePath>
+            </File>
+            <File>
               <FileName>i2c_bitbang.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\i2c_bitbang.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled_draw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\oled_draw.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\oled_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\buzzer.h</FilePath>
             </File>
             <File>
               <FileName>i2c_bitbang.h</FileName>
@@ -436,29 +456,9 @@
               <FilePath>..\Inc\leds.h</FilePath>
             </File>
             <File>
-              <FileName>outputs.h</FileName>
+              <FileName>oled_draw.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Inc\outputs.h</FilePath>
-            </File>
-            <File>
-              <FileName>buzzer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\buzzer.c</FilePath>
-            </File>
-            <File>
-              <FileName>buzzer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\buzzer.h</FilePath>
-            </File>
-            <File>
-              <FileName>main.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Inc\main.h</FilePath>
-            </File>
-            <File>
-              <FileName>oled_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\oled_i2c.c</FilePath>
+              <FilePath>..\Inc\oled_draw.h</FilePath>
             </File>
             <File>
               <FileName>oled_i2c.h</FileName>
@@ -466,14 +466,19 @@
               <FilePath>..\Inc\oled_i2c.h</FilePath>
             </File>
             <File>
-              <FileName>oled_draw.h</FileName>
+              <FileName>outputs.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Inc\oled_draw.h</FilePath>
+              <FilePath>..\Inc\outputs.h</FilePath>
             </File>
             <File>
-              <FileName>oled_draw.c</FileName>
+              <FileName>gpio_interrupt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Src\oled_draw.c</FilePath>
+              <FilePath>..\Src\gpio_interrupt.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_interrupt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\gpio_interrupt.h</FilePath>
             </File>
           </Files>
         </Group>

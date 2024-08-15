@@ -42,8 +42,12 @@ void MF_RCC_FOUT0_Init(void);
 void MF_GPIO_Init(void);
 void MF_ADC_Common_Init(void);
 void MF_ADC_Sampling_Init(void);
+void MF_EXTI_Init(void);
+void MF_EXTI_Line2_Init(void);
+void MF_EXTI_Line4_Init(void);
+void MF_EXTI_Line6_Init(void);
+void MF_EXTI_Line10_Init(void);
 void MF_SWD_IO_Init(void);
-void MF_WKUP_Init(void);
 
 
 /* Private defines -----------------------------------------------------------*/

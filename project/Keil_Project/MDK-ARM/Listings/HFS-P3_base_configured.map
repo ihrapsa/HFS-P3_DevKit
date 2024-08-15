@@ -10,6 +10,7 @@ Section Cross References
     startup_fm33lc0xx.o(RESET) refers to startup_fm33lc0xx.o(STACK) for __initial_sp
     startup_fm33lc0xx.o(RESET) refers to startup_fm33lc0xx.o(.text) for Reset_Handler
     startup_fm33lc0xx.o(RESET) refers to mf_config.o(.text.HFDET_IRQHandler) for HFDET_IRQHandler
+    startup_fm33lc0xx.o(RESET) refers to gpio_interrupt.o(.text.GPIO_IRQHandler) for GPIO_IRQHandler
     startup_fm33lc0xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_fm33lc0xx.o(.text) refers to system_fm33lc0xx.o(.text.SystemInit) for SystemInit
     startup_fm33lc0xx.o(.text) refers to __main.o(!!!main) for __main
@@ -24,11 +25,24 @@ Section Cross References
     mf_config.o(.text.MF_ADC_Sampling_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
     mf_config.o(.text.MF_ADC_Sampling_Init) refers to fm33lc0xx_fl_adc.o(.text.FL_ADC_Init) for FL_ADC_Init
     mf_config.o(.ARM.exidx.text.MF_ADC_Sampling_Init) refers to mf_config.o(.text.MF_ADC_Sampling_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_EXTI_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit) for FL_EXTI_CommonInit
+    mf_config.o(.ARM.exidx.text.MF_EXTI_Init) refers to mf_config.o(.text.MF_EXTI_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_EXTI_Line2_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
+    mf_config.o(.text.MF_EXTI_Line2_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init) for FL_EXTI_Init
+    mf_config.o(.ARM.exidx.text.MF_EXTI_Line2_Init) refers to mf_config.o(.text.MF_EXTI_Line2_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_EXTI_Line4_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
+    mf_config.o(.text.MF_EXTI_Line4_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init) for FL_EXTI_Init
+    mf_config.o(.ARM.exidx.text.MF_EXTI_Line4_Init) refers to mf_config.o(.text.MF_EXTI_Line4_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_EXTI_Line6_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
+    mf_config.o(.text.MF_EXTI_Line6_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init) for FL_EXTI_Init
+    mf_config.o(.ARM.exidx.text.MF_EXTI_Line6_Init) refers to mf_config.o(.text.MF_EXTI_Line6_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_EXTI_Line10_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
+    mf_config.o(.text.MF_EXTI_Line10_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init) for FL_EXTI_Init
+    mf_config.o(.ARM.exidx.text.MF_EXTI_Line10_Init) refers to mf_config.o(.text.MF_EXTI_Line10_Init) for [Anonymous Symbol]
     mf_config.o(.text.MF_SWD_IO_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
     mf_config.o(.ARM.exidx.text.MF_SWD_IO_Init) refers to mf_config.o(.text.MF_SWD_IO_Init) for [Anonymous Symbol]
-    mf_config.o(.text.MF_WKUP_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
-    mf_config.o(.text.MF_WKUP_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init) for FL_WKUP_Init
-    mf_config.o(.ARM.exidx.text.MF_WKUP_Init) refers to mf_config.o(.text.MF_WKUP_Init) for [Anonymous Symbol]
+    mf_config.o(.text.MF_NVIC_Init) refers to fm33lc0xx_fl.o(.text.FL_NVIC_Init) for FL_NVIC_Init
+    mf_config.o(.ARM.exidx.text.MF_NVIC_Init) refers to mf_config.o(.text.MF_NVIC_Init) for [Anonymous Symbol]
     mf_config.o(.ARM.exidx.text.HFDET_IRQHandler) refers to mf_config.o(.text.HFDET_IRQHandler) for [Anonymous Symbol]
     mf_config.o(.text.MF_Clock_Init) refers to system_fm33lc0xx.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
     mf_config.o(.text.MF_Clock_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
@@ -37,7 +51,9 @@ Section Cross References
     mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_adc.o(.text.FL_ADC_CommonInit) for FL_ADC_CommonInit
     mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init) for FL_GPIO_Init
     mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_adc.o(.text.FL_ADC_Init) for FL_ADC_Init
-    mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init) for FL_WKUP_Init
+    mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit) for FL_EXTI_CommonInit
+    mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init) for FL_EXTI_Init
+    mf_config.o(.text.MF_Config_Init) refers to fm33lc0xx_fl.o(.text.FL_NVIC_Init) for FL_NVIC_Init
     mf_config.o(.ARM.exidx.text.MF_Config_Init) refers to mf_config.o(.text.MF_Config_Init) for [Anonymous Symbol]
     mf_config.o(.ARM.exidx.text.Error_Handler) refers to mf_config.o(.text.Error_Handler) for [Anonymous Symbol]
     mf_config.o(.ARM.exidx.text.assert_failed) refers to mf_config.o(.text.assert_failed) for [Anonymous Symbol]
@@ -47,12 +63,23 @@ Section Cross References
     main.o(.text.main) refers to oled_i2c.o(.text.OLED_HardwareReset) for OLED_HardwareReset
     main.o(.text.main) refers to oled_i2c.o(.text.OLED_Init) for OLED_Init
     main.o(.text.main) refers to oled_i2c.o(.text.OLED_Clear) for OLED_Clear
-    main.o(.text.main) refers to buzzer.o(.text.play_beep) for play_beep
-    main.o(.text.main) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
     main.o(.text.main) refers to oled_draw.o(.text.OLED_ShowText) for OLED_ShowText
     main.o(.text.main) refers to oled_i2c.o(.text.OLED_WriteDataList) for OLED_WriteDataList
     main.o(.text.main) refers to oled_draw.o(.rodata.skull) for skull
     main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    buzzer.o(.text.play_beep) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
+    buzzer.o(.ARM.exidx.text.play_beep) refers to buzzer.o(.text.play_beep) for [Anonymous Symbol]
+    buzzer.o(.text.play_click) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
+    buzzer.o(.ARM.exidx.text.play_click) refers to buzzer.o(.text.play_click) for [Anonymous Symbol]
+    buzzer.o(.text.play_click_1ms) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
+    buzzer.o(.ARM.exidx.text.play_click_1ms) refers to buzzer.o(.text.play_click_1ms) for [Anonymous Symbol]
+    buzzer.o(.text.play_click_500us) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
+    buzzer.o(.ARM.exidx.text.play_click_500us) refers to buzzer.o(.text.play_click_500us) for [Anonymous Symbol]
+    buzzer.o(.text.play_tone) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
+    buzzer.o(.text.play_tone) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
+    buzzer.o(.ARM.exidx.text.play_tone) refers to buzzer.o(.text.play_tone) for [Anonymous Symbol]
+    buzzer.o(.text.play_melody) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
+    buzzer.o(.ARM.exidx.text.play_melody) refers to buzzer.o(.text.play_melody) for [Anonymous Symbol]
     i2c_bitbang.o(.ARM.exidx.text.I2C_Init) refers to i2c_bitbang.o(.text.I2C_Init) for [Anonymous Symbol]
     i2c_bitbang.o(.text.I2C_Start) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
     i2c_bitbang.o(.ARM.exidx.text.I2C_Start) refers to i2c_bitbang.o(.text.I2C_Start) for [Anonymous Symbol]
@@ -60,13 +87,14 @@ Section Cross References
     i2c_bitbang.o(.ARM.exidx.text.I2C_Stop) refers to i2c_bitbang.o(.text.I2C_Stop) for [Anonymous Symbol]
     i2c_bitbang.o(.text.I2C_WriteByte) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
     i2c_bitbang.o(.ARM.exidx.text.I2C_WriteByte) refers to i2c_bitbang.o(.text.I2C_WriteByte) for [Anonymous Symbol]
-    buzzer.o(.text.play_beep) refers to fm33lc0xx_fl.o(.text.FL_DelayUs) for FL_DelayUs
-    buzzer.o(.ARM.exidx.text.play_beep) refers to buzzer.o(.text.play_beep) for [Anonymous Symbol]
-    buzzer.o(.text.play_tone) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
-    buzzer.o(.text.play_tone) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
-    buzzer.o(.ARM.exidx.text.play_tone) refers to buzzer.o(.text.play_tone) for [Anonymous Symbol]
-    buzzer.o(.text.play_melody) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
-    buzzer.o(.ARM.exidx.text.play_melody) refers to buzzer.o(.text.play_melody) for [Anonymous Symbol]
+    oled_draw.o(.text.OLED_ShowChar) refers to oled_i2c.o(.text.OLED_WriteData) for OLED_WriteData
+    oled_draw.o(.text.OLED_ShowChar) refers to oled_draw.o(.rodata.ASCII_1608) for ASCII_1608
+    oled_draw.o(.text.OLED_ShowChar) refers to oled_draw.o(.rodata.ASCII_0708) for ASCII_0708
+    oled_draw.o(.ARM.exidx.text.OLED_ShowChar) refers to oled_draw.o(.text.OLED_ShowChar) for [Anonymous Symbol]
+    oled_draw.o(.text.OLED_ShowText) refers to oled_i2c.o(.text.OLED_WriteData) for OLED_WriteData
+    oled_draw.o(.text.OLED_ShowText) refers to oled_draw.o(.rodata.ASCII_1608) for ASCII_1608
+    oled_draw.o(.text.OLED_ShowText) refers to oled_draw.o(.rodata.ASCII_0708) for ASCII_0708
+    oled_draw.o(.ARM.exidx.text.OLED_ShowText) refers to oled_draw.o(.text.OLED_ShowText) for [Anonymous Symbol]
     oled_i2c.o(.text.OLED_HardwareReset) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
     oled_i2c.o(.ARM.exidx.text.OLED_HardwareReset) refers to oled_i2c.o(.text.OLED_HardwareReset) for [Anonymous Symbol]
     oled_i2c.o(.text.OLED_WriteCommand) refers to i2c_bitbang.o(.text.I2C_Start) for I2C_Start
@@ -100,14 +128,11 @@ Section Cross References
     oled_i2c.o(.text.OLED_Clear) refers to i2c_bitbang.o(.text.I2C_WriteByte) for I2C_WriteByte
     oled_i2c.o(.text.OLED_Clear) refers to i2c_bitbang.o(.text.I2C_Stop) for I2C_Stop
     oled_i2c.o(.ARM.exidx.text.OLED_Clear) refers to oled_i2c.o(.text.OLED_Clear) for [Anonymous Symbol]
-    oled_draw.o(.text.OLED_ShowChar) refers to oled_i2c.o(.text.OLED_WriteData) for OLED_WriteData
-    oled_draw.o(.text.OLED_ShowChar) refers to oled_draw.o(.rodata.ASCII_1608) for ASCII_1608
-    oled_draw.o(.text.OLED_ShowChar) refers to oled_draw.o(.rodata.ASCII_0708) for ASCII_0708
-    oled_draw.o(.ARM.exidx.text.OLED_ShowChar) refers to oled_draw.o(.text.OLED_ShowChar) for [Anonymous Symbol]
-    oled_draw.o(.text.OLED_ShowText) refers to oled_i2c.o(.text.OLED_WriteData) for OLED_WriteData
-    oled_draw.o(.text.OLED_ShowText) refers to oled_draw.o(.rodata.ASCII_1608) for ASCII_1608
-    oled_draw.o(.text.OLED_ShowText) refers to oled_draw.o(.rodata.ASCII_0708) for ASCII_0708
-    oled_draw.o(.ARM.exidx.text.OLED_ShowText) refers to oled_draw.o(.text.OLED_ShowText) for [Anonymous Symbol]
+    gpio_interrupt.o(.text.GPIO_IRQHandler) refers to fm33lc0xx_fl.o(.text.FL_DelayMs) for FL_DelayMs
+    gpio_interrupt.o(.text.GPIO_IRQHandler) refers to buzzer.o(.text.play_click) for play_click
+    gpio_interrupt.o(.text.GPIO_IRQHandler) refers to buzzer.o(.text.play_click_500us) for play_click_500us
+    gpio_interrupt.o(.text.GPIO_IRQHandler) refers to buzzer.o(.text.play_beep) for play_beep
+    gpio_interrupt.o(.ARM.exidx.text.GPIO_IRQHandler) refers to gpio_interrupt.o(.text.GPIO_IRQHandler) for [Anonymous Symbol]
     system_fm33lc0xx.o(.text.SystemCoreClockUpdate) refers to aeabi_sdivfast.o(.text_divfast) for __aeabi_uidiv
     system_fm33lc0xx.o(.text.SystemCoreClockUpdate) refers to system_fm33lc0xx.o(.data.XTLFClock) for XTLFClock
     system_fm33lc0xx.o(.text.SystemCoreClockUpdate) refers to system_fm33lc0xx.o(.data.XTHFClock) for XTHFClock
@@ -536,10 +561,20 @@ Removing Unused input sections from the image.
     Removing mf_config.o(.ARM.exidx.text.MF_ADC_Common_Init), (8 bytes).
     Removing mf_config.o(.text.MF_ADC_Sampling_Init), (104 bytes).
     Removing mf_config.o(.ARM.exidx.text.MF_ADC_Sampling_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_EXTI_Init), (18 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_EXTI_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_EXTI_Line2_Init), (52 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_EXTI_Line2_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_EXTI_Line4_Init), (52 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_EXTI_Line4_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_EXTI_Line6_Init), (52 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_EXTI_Line6_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_EXTI_Line10_Init), (52 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_EXTI_Line10_Init), (8 bytes).
     Removing mf_config.o(.text.MF_SWD_IO_Init), (64 bytes).
     Removing mf_config.o(.ARM.exidx.text.MF_SWD_IO_Init), (8 bytes).
-    Removing mf_config.o(.text.MF_WKUP_Init), (48 bytes).
-    Removing mf_config.o(.ARM.exidx.text.MF_WKUP_Init), (8 bytes).
+    Removing mf_config.o(.text.MF_NVIC_Init), (20 bytes).
+    Removing mf_config.o(.ARM.exidx.text.MF_NVIC_Init), (8 bytes).
     Removing mf_config.o(.ARM.exidx.text.HFDET_IRQHandler), (8 bytes).
     Removing mf_config.o(.ARM.exidx.text.MF_Clock_Init), (8 bytes).
     Removing mf_config.o(.ARM.exidx.text.MF_Config_Init), (8 bytes).
@@ -550,18 +585,28 @@ Removing Unused input sections from the image.
     Removing main.o(.text), (0 bytes).
     Removing main.o(.ARM.exidx.text.main), (8 bytes).
     Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing buzzer.o(.text), (0 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_beep), (8 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_click), (8 bytes).
+    Removing buzzer.o(.text.play_click_1ms), (52 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_click_1ms), (8 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_click_500us), (8 bytes).
+    Removing buzzer.o(.text.play_tone), (100 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_tone), (8 bytes).
+    Removing buzzer.o(.text.play_melody), (380 bytes).
+    Removing buzzer.o(.ARM.exidx.text.play_melody), (8 bytes).
     Removing i2c_bitbang.o(.text), (0 bytes).
     Removing i2c_bitbang.o(.text.I2C_Init), (24 bytes).
     Removing i2c_bitbang.o(.ARM.exidx.text.I2C_Init), (8 bytes).
     Removing i2c_bitbang.o(.ARM.exidx.text.I2C_Start), (8 bytes).
     Removing i2c_bitbang.o(.ARM.exidx.text.I2C_Stop), (8 bytes).
     Removing i2c_bitbang.o(.ARM.exidx.text.I2C_WriteByte), (8 bytes).
-    Removing buzzer.o(.text), (0 bytes).
-    Removing buzzer.o(.ARM.exidx.text.play_beep), (8 bytes).
-    Removing buzzer.o(.text.play_tone), (100 bytes).
-    Removing buzzer.o(.ARM.exidx.text.play_tone), (8 bytes).
-    Removing buzzer.o(.text.play_melody), (380 bytes).
-    Removing buzzer.o(.ARM.exidx.text.play_melody), (8 bytes).
+    Removing oled_draw.o(.text), (0 bytes).
+    Removing oled_draw.o(.text.OLED_ShowChar), (76 bytes).
+    Removing oled_draw.o(.ARM.exidx.text.OLED_ShowChar), (8 bytes).
+    Removing oled_draw.o(.ARM.exidx.text.OLED_ShowText), (8 bytes).
+    Removing oled_draw.o(.rodata.ALPHABET), (208 bytes).
+    Removing oled_draw.o(.rodata.ASCII_1206), (1140 bytes).
     Removing oled_i2c.o(.text), (0 bytes).
     Removing oled_i2c.o(.ARM.exidx.text.OLED_HardwareReset), (8 bytes).
     Removing oled_i2c.o(.text.OLED_WriteCommand), (32 bytes).
@@ -576,57 +621,36 @@ Removing Unused input sections from the image.
     Removing oled_i2c.o(.text.OLED_StartPosition), (48 bytes).
     Removing oled_i2c.o(.ARM.exidx.text.OLED_StartPosition), (8 bytes).
     Removing oled_i2c.o(.ARM.exidx.text.OLED_Clear), (8 bytes).
-    Removing oled_draw.o(.text), (0 bytes).
-    Removing oled_draw.o(.text.OLED_ShowChar), (76 bytes).
-    Removing oled_draw.o(.ARM.exidx.text.OLED_ShowChar), (8 bytes).
-    Removing oled_draw.o(.ARM.exidx.text.OLED_ShowText), (8 bytes).
-    Removing oled_draw.o(.rodata.ALPHABET), (208 bytes).
-    Removing oled_draw.o(.rodata.ASCII_1206), (1140 bytes).
+    Removing gpio_interrupt.o(.text), (0 bytes).
+    Removing gpio_interrupt.o(.ARM.exidx.text.GPIO_IRQHandler), (8 bytes).
     Removing system_fm33lc0xx.o(.text), (0 bytes).
     Removing system_fm33lc0xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
     Removing system_fm33lc0xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.text), (0 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit), (56 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_CommonInit), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonDeinit), (20 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_CommonDeinit), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonStructInit), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_CommonStructInit), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init), (412 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_Init), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_DeInit), (224 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_DeInit), (8 bytes).
     Removing fm33lc0xx_fl_exti.o(.text.FL_EXTI_StructInit), (10 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_EXTI_StructInit), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine0), (12 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine0), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine1), (12 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine1), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine2), (12 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine2), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine3), (12 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine3), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine4), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine4), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine5), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine5), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine6), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine6), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine7), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine7), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine8), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine8), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine9), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine9), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine10), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine10), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine11), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine11), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine12), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine12), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine13), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine13), (8 bytes).
-    Removing fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine14), (14 bytes).
     Removing fm33lc0xx_fl_exti.o(.ARM.exidx.text.FL_GPIO_SetExtiLine14), (8 bytes).
     Removing fm33lc0xx_fl_u7816.o(.text), (0 bytes).
     Removing fm33lc0xx_fl_u7816.o(.text.FL_U7816_DeInit), (68 bytes).
@@ -720,7 +744,6 @@ Removing Unused input sections from the image.
     Removing fm33lc0xx_fl.o(.text.FL_DelayEnd), (20 bytes).
     Removing fm33lc0xx_fl.o(.ARM.exidx.text.FL_DelayEnd), (8 bytes).
     Removing fm33lc0xx_fl.o(.ARM.exidx.text.FL_Init), (8 bytes).
-    Removing fm33lc0xx_fl.o(.text.FL_NVIC_Init), (112 bytes).
     Removing fm33lc0xx_fl.o(.ARM.exidx.text.FL_NVIC_Init), (8 bytes).
     Removing fm33lc0xx_fl_rng.o(.text), (0 bytes).
     Removing fm33lc0xx_fl_rng.o(.text.FL_RNG_DeInit), (68 bytes).
@@ -794,6 +817,7 @@ Removing Unused input sections from the image.
     Removing fm33lc0xx_fl_gpio.o(.ARM.exidx.text.FL_GPIO_Init), (8 bytes).
     Removing fm33lc0xx_fl_gpio.o(.text.FL_GPIO_StructInit), (24 bytes).
     Removing fm33lc0xx_fl_gpio.o(.ARM.exidx.text.FL_GPIO_StructInit), (8 bytes).
+    Removing fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init), (136 bytes).
     Removing fm33lc0xx_fl_gpio.o(.ARM.exidx.text.FL_WKUP_Init), (8 bytes).
     Removing fm33lc0xx_fl_gpio.o(.text.FL_WKUP_DeInit), (104 bytes).
     Removing fm33lc0xx_fl_gpio.o(.ARM.exidx.text.FL_WKUP_DeInit), (8 bytes).
@@ -928,7 +952,7 @@ Removing Unused input sections from the image.
     Removing fm33lc0xx_fl_aes.o(.text.FL_AES_StructInit), (12 bytes).
     Removing fm33lc0xx_fl_aes.o(.ARM.exidx.text.FL_AES_StructInit), (8 bytes).
 
-399 unused section(s) (total 20312 bytes) removed from the image.
+398 unused section(s) (total 19988 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1046,6 +1070,7 @@ Image Symbol Table
     fm33lc0xx_fl_u7816.c                     0x00000000   Number         0  fm33lc0xx_fl_u7816.o ABSOLUTE
     fm33lc0xx_fl_uart.c                      0x00000000   Number         0  fm33lc0xx_fl_uart.o ABSOLUTE
     fm33lc0xx_fl_wwdt.c                      0x00000000   Number         0  fm33lc0xx_fl_wwdt.o ABSOLUTE
+    gpio_interrupt.c                         0x00000000   Number         0  gpio_interrupt.o ABSOLUTE
     i2c_bitbang.c                            0x00000000   Number         0  i2c_bitbang.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     mf_config.c                              0x00000000   Number         0  mf_config.o ABSOLUTE
@@ -1112,71 +1137,118 @@ Image Symbol Table
     __arm_cp.1_0                             0x00000274   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_CommonInit)
     [Anonymous Symbol]                       0x00000278   Section        0  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
     __arm_cp.4_0                             0x00000420   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
-    __arm_cp.4_2                             0x00000424   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
-    __arm_cp.4_3                             0x00000428   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
-    [Anonymous Symbol]                       0x0000042c   Section        0  fm33lc0xx_fl.o(.text.FL_DelayInit)
-    [Anonymous Symbol]                       0x00000440   Section        0  fm33lc0xx_fl.o(.text.FL_DelayMs)
-    [Anonymous Symbol]                       0x00000458   Section        0  fm33lc0xx_fl.o(.text.FL_DelayUs)
-    __arm_cp.1_0                             0x00000484   Number         4  fm33lc0xx_fl.o(.text.FL_DelayUs)
-    __arm_cp.1_1                             0x00000488   Number         4  fm33lc0xx_fl.o(.text.FL_DelayUs)
+    __arm_cp.4_1                             0x00000424   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
+    __arm_cp.4_2                             0x00000428   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
+    __arm_cp.4_3                             0x0000042c   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
+    __arm_cp.4_4                             0x00000430   Number         4  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
+    [Anonymous Symbol]                       0x00000434   Section        0  fm33lc0xx_fl.o(.text.FL_DelayInit)
+    [Anonymous Symbol]                       0x00000448   Section        0  fm33lc0xx_fl.o(.text.FL_DelayMs)
+    [Anonymous Symbol]                       0x00000460   Section        0  fm33lc0xx_fl.o(.text.FL_DelayUs)
     __arm_cp.1_2                             0x0000048c   Number         4  fm33lc0xx_fl.o(.text.FL_DelayUs)
-    [Anonymous Symbol]                       0x00000490   Section        0  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
-    __arm_cp.1_0                             0x00000578   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
-    __arm_cp.1_1                             0x0000057c   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
-    __arm_cp.1_2                             0x00000580   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
-    [Anonymous Symbol]                       0x00000584   Section        0  fm33lc0xx_fl.o(.text.FL_Init)
-    [Anonymous Symbol]                       0x0000058c   Section        0  fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init)
-    __arm_cp.3_0                             0x0000060c   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init)
-    __arm_cp.3_1                             0x00000610   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init)
-    [Anonymous Symbol]                       0x00000614   Section        0  mf_config.o(.text.HFDET_IRQHandler)
-    __arm_cp.6_0                             0x0000062c   Number         4  mf_config.o(.text.HFDET_IRQHandler)
-    [Anonymous Symbol]                       0x00000630   Section        0  i2c_bitbang.o(.text.I2C_Start)
-    [Anonymous Symbol]                       0x00000664   Section        0  i2c_bitbang.o(.text.I2C_Stop)
-    [Anonymous Symbol]                       0x00000690   Section        0  i2c_bitbang.o(.text.I2C_WriteByte)
-    __arm_cp.3_0                             0x00000708   Number         4  i2c_bitbang.o(.text.I2C_WriteByte)
-    [Anonymous Symbol]                       0x0000070c   Section        0  mf_config.o(.text.MF_Clock_Init)
-    __arm_cp.7_0                             0x000007d0   Number         4  mf_config.o(.text.MF_Clock_Init)
-    __arm_cp.7_1                             0x000007d4   Number         4  mf_config.o(.text.MF_Clock_Init)
-    __arm_cp.7_3                             0x000007d8   Number         4  mf_config.o(.text.MF_Clock_Init)
-    [Anonymous Symbol]                       0x000007dc   Section        0  mf_config.o(.text.MF_Config_Init)
-    __arm_cp.8_1                             0x0000089c   Number         4  mf_config.o(.text.MF_Config_Init)
-    [Anonymous Symbol]                       0x000008a0   Section        0  mf_config.o(.text.MF_GPIO_Init)
-    __arm_cp.0_0                             0x00000998   Number         4  mf_config.o(.text.MF_GPIO_Init)
-    [Anonymous Symbol]                       0x0000099c   Section        0  oled_i2c.o(.text.OLED_Clear)
-    [Anonymous Symbol]                       0x00000a68   Section        0  oled_i2c.o(.text.OLED_HardwareReset)
-    __arm_cp.0_0                             0x00000a98   Number         4  oled_i2c.o(.text.OLED_HardwareReset)
-    [Anonymous Symbol]                       0x00000a9c   Section        0  oled_i2c.o(.text.OLED_Init)
-    [Anonymous Symbol]                       0x00000d38   Section        0  oled_draw.o(.text.OLED_ShowText)
-    __arm_cp.1_0                             0x00000d8c   Number         4  oled_draw.o(.text.OLED_ShowText)
-    __arm_cp.1_1                             0x00000d90   Number         4  oled_draw.o(.text.OLED_ShowText)
-    __arm_cp.1_2                             0x00000d94   Number         4  oled_draw.o(.text.OLED_ShowText)
-    [Anonymous Symbol]                       0x00000d98   Section        0  oled_i2c.o(.text.OLED_WriteData)
-    [Anonymous Symbol]                       0x00000db8   Section        0  oled_i2c.o(.text.OLED_WriteDataList)
-    [Anonymous Symbol]                       0x00000de8   Section        0  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_0                             0x00000ef4   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_1                             0x00000ef8   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_2                             0x00000efc   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_3                             0x00000f00   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_5                             0x00000f14   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_6                             0x00000f18   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_7                             0x00000f1c   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_8                             0x00000f20   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    __arm_cp.0_9                             0x00000f24   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    [Anonymous Symbol]                       0x00000f28   Section        0  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_0                             0x00001000   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_1                             0x00001004   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_2                             0x00001008   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_3                             0x0000100c   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_4                             0x00001010   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_5                             0x00001014   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    __arm_cp.1_6                             0x00001018   Number         4  system_fm33lc0xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x0000101c   Section        0  main.o(.text.main)
-    __arm_cp.0_0                             0x000010ec   Number         4  main.o(.text.main)
-    __arm_cp.0_1                             0x000010f0   Number         4  main.o(.text.main)
-    __arm_cp.0_3                             0x000010fc   Number         4  main.o(.text.main)
-    [Anonymous Symbol]                       0x00001100   Section        0  buzzer.o(.text.play_beep)
-    __arm_cp.0_0                             0x00001130   Number         4  buzzer.o(.text.play_beep)
-    .text_divfast                            0x00001134   Section      502  aeabi_sdivfast.o(.text_divfast)
+    [Anonymous Symbol]                       0x00000490   Section        0  fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit)
+    __arm_cp.0_0                             0x000004c0   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit)
+    __arm_cp.0_1                             0x000004c4   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit)
+    [Anonymous Symbol]                       0x000004c8   Section        0  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_0                             0x0000060c   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_1                             0x00000610   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_2                             0x00000614   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_3                             0x00000618   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_4                             0x0000061c   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    setExtiLineFuncs                         0x00000620   Number         0  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_6                             0x0000065c   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    __arm_cp.3_7                             0x00000660   Number         4  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    [Anonymous Symbol]                       0x00000664   Section        0  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
+    __arm_cp.1_0                             0x0000074c   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
+    __arm_cp.1_1                             0x00000750   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
+    __arm_cp.1_2                             0x00000754   Number         4  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
+    FL_GPIO_SetExtiLine0                     0x00000759   Thumb Code    12  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine0)
+    [Anonymous Symbol]                       0x00000758   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine0)
+    FL_GPIO_SetExtiLine1                     0x00000765   Thumb Code    12  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine1)
+    [Anonymous Symbol]                       0x00000764   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine1)
+    FL_GPIO_SetExtiLine10                    0x00000771   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine10)
+    [Anonymous Symbol]                       0x00000770   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine10)
+    FL_GPIO_SetExtiLine11                    0x0000077f   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine11)
+    [Anonymous Symbol]                       0x0000077e   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine11)
+    FL_GPIO_SetExtiLine12                    0x0000078d   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine12)
+    [Anonymous Symbol]                       0x0000078c   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine12)
+    FL_GPIO_SetExtiLine13                    0x0000079b   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine13)
+    [Anonymous Symbol]                       0x0000079a   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine13)
+    FL_GPIO_SetExtiLine14                    0x000007a9   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine14)
+    [Anonymous Symbol]                       0x000007a8   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine14)
+    FL_GPIO_SetExtiLine2                     0x000007b7   Thumb Code    12  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine2)
+    [Anonymous Symbol]                       0x000007b6   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine2)
+    FL_GPIO_SetExtiLine3                     0x000007c3   Thumb Code    12  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine3)
+    [Anonymous Symbol]                       0x000007c2   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine3)
+    FL_GPIO_SetExtiLine4                     0x000007cf   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine4)
+    [Anonymous Symbol]                       0x000007ce   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine4)
+    FL_GPIO_SetExtiLine5                     0x000007dd   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine5)
+    [Anonymous Symbol]                       0x000007dc   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine5)
+    FL_GPIO_SetExtiLine6                     0x000007eb   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine6)
+    [Anonymous Symbol]                       0x000007ea   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine6)
+    FL_GPIO_SetExtiLine7                     0x000007f9   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine7)
+    [Anonymous Symbol]                       0x000007f8   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine7)
+    FL_GPIO_SetExtiLine8                     0x00000807   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine8)
+    [Anonymous Symbol]                       0x00000806   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine8)
+    FL_GPIO_SetExtiLine9                     0x00000815   Thumb Code    14  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine9)
+    [Anonymous Symbol]                       0x00000814   Section        0  fm33lc0xx_fl_exti.o(.text.FL_GPIO_SetExtiLine9)
+    [Anonymous Symbol]                       0x00000822   Section        0  fm33lc0xx_fl.o(.text.FL_Init)
+    [Anonymous Symbol]                       0x0000082c   Section        0  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    __arm_cp.7_0                             0x0000088c   Number         4  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    __arm_cp.7_1                             0x00000890   Number         4  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    __arm_cp.7_2                             0x00000894   Number         4  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    __arm_cp.7_3                             0x00000898   Number         4  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    [Anonymous Symbol]                       0x0000089c   Section        0  gpio_interrupt.o(.text.GPIO_IRQHandler)
+    __arm_cp.0_1                             0x0000094c   Number         4  gpio_interrupt.o(.text.GPIO_IRQHandler)
+    [Anonymous Symbol]                       0x00000950   Section        0  mf_config.o(.text.HFDET_IRQHandler)
+    __arm_cp.11_0                            0x00000968   Number         4  mf_config.o(.text.HFDET_IRQHandler)
+    [Anonymous Symbol]                       0x0000096c   Section        0  i2c_bitbang.o(.text.I2C_Start)
+    [Anonymous Symbol]                       0x000009a0   Section        0  i2c_bitbang.o(.text.I2C_Stop)
+    [Anonymous Symbol]                       0x000009cc   Section        0  i2c_bitbang.o(.text.I2C_WriteByte)
+    __arm_cp.3_0                             0x00000a44   Number         4  i2c_bitbang.o(.text.I2C_WriteByte)
+    [Anonymous Symbol]                       0x00000a48   Section        0  mf_config.o(.text.MF_Clock_Init)
+    __arm_cp.12_0                            0x00000b0c   Number         4  mf_config.o(.text.MF_Clock_Init)
+    __arm_cp.12_1                            0x00000b10   Number         4  mf_config.o(.text.MF_Clock_Init)
+    __arm_cp.12_3                            0x00000b14   Number         4  mf_config.o(.text.MF_Clock_Init)
+    [Anonymous Symbol]                       0x00000b18   Section        0  mf_config.o(.text.MF_Config_Init)
+    __arm_cp.13_0                            0x00000c60   Number         4  mf_config.o(.text.MF_Config_Init)
+    __arm_cp.13_1                            0x00000c64   Number         4  mf_config.o(.text.MF_Config_Init)
+    [Anonymous Symbol]                       0x00000c68   Section        0  mf_config.o(.text.MF_GPIO_Init)
+    __arm_cp.0_0                             0x00000d20   Number         4  mf_config.o(.text.MF_GPIO_Init)
+    [Anonymous Symbol]                       0x00000d24   Section        0  oled_i2c.o(.text.OLED_Clear)
+    [Anonymous Symbol]                       0x00000df0   Section        0  oled_i2c.o(.text.OLED_HardwareReset)
+    __arm_cp.0_0                             0x00000e20   Number         4  oled_i2c.o(.text.OLED_HardwareReset)
+    [Anonymous Symbol]                       0x00000e24   Section        0  oled_i2c.o(.text.OLED_Init)
+    [Anonymous Symbol]                       0x000010c0   Section        0  oled_draw.o(.text.OLED_ShowText)
+    __arm_cp.1_0                             0x00001114   Number         4  oled_draw.o(.text.OLED_ShowText)
+    __arm_cp.1_1                             0x00001118   Number         4  oled_draw.o(.text.OLED_ShowText)
+    __arm_cp.1_2                             0x0000111c   Number         4  oled_draw.o(.text.OLED_ShowText)
+    [Anonymous Symbol]                       0x00001120   Section        0  oled_i2c.o(.text.OLED_WriteData)
+    [Anonymous Symbol]                       0x00001140   Section        0  oled_i2c.o(.text.OLED_WriteDataList)
+    [Anonymous Symbol]                       0x00001170   Section        0  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_0                             0x0000127c   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_1                             0x00001280   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_2                             0x00001284   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_3                             0x00001288   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_5                             0x0000129c   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_6                             0x000012a0   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_7                             0x000012a4   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_8                             0x000012a8   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_9                             0x000012ac   Number         4  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x000012b0   Section        0  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_0                             0x00001388   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_1                             0x0000138c   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_2                             0x00001390   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_3                             0x00001394   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_4                             0x00001398   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_5                             0x0000139c   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    __arm_cp.1_6                             0x000013a0   Number         4  system_fm33lc0xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x000013a4   Section        0  main.o(.text.main)
+    __arm_cp.0_1                             0x000013dc   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x000013e0   Section        0  buzzer.o(.text.play_beep)
+    [Anonymous Symbol]                       0x00001410   Section        0  buzzer.o(.text.play_click)
+    [Anonymous Symbol]                       0x00001440   Section        0  buzzer.o(.text.play_click_500us)
+    __arm_cp.3_0                             0x00001470   Number         4  buzzer.o(.text.play_click_500us)
+    .text_divfast                            0x00001474   Section      502  aeabi_sdivfast.o(.text_divfast)
     .bss                                     0x20000010   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000070   Data        2048  startup_fm33lc0xx.o(HEAP)
     HEAP                                     0x20000070   Section     2048  startup_fm33lc0xx.o(HEAP)
@@ -1284,7 +1356,6 @@ Image Symbol Table
     COMPx_IRQHandler                         0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
     DMA_IRQHandler                           0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
     FLASH_IRQHandler                         0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
-    GPIO_IRQHandler                          0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
     GPTIM0_IRQHandler                        0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
     GPTIM1_IRQHandler                        0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
     I2C_IRQHandler                           0x00000193   Thumb Code     0  startup_fm33lc0xx.o(.text)
@@ -1323,36 +1394,41 @@ Image Symbol Table
     __semihosting_library_function           0x00000223   Thumb Code     0  indicate_semi.o(.text)
     FL_ADC_CommonInit                        0x00000225   Thumb Code    80  fm33lc0xx_fl_adc.o(.text.FL_ADC_CommonInit)
     FL_ADC_Init                              0x00000279   Thumb Code   424  fm33lc0xx_fl_adc.o(.text.FL_ADC_Init)
-    FL_DelayInit                             0x0000042d   Thumb Code    20  fm33lc0xx_fl.o(.text.FL_DelayInit)
-    FL_DelayMs                               0x00000441   Thumb Code    22  fm33lc0xx_fl.o(.text.FL_DelayMs)
-    FL_DelayUs                               0x00000459   Thumb Code    44  fm33lc0xx_fl.o(.text.FL_DelayUs)
-    FL_GPIO_Init                             0x00000491   Thumb Code   232  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
-    FL_Init                                  0x00000585   Thumb Code     8  fm33lc0xx_fl.o(.text.FL_Init)
-    FL_WKUP_Init                             0x0000058d   Thumb Code   128  fm33lc0xx_fl_gpio.o(.text.FL_WKUP_Init)
-    HFDET_IRQHandler                         0x00000615   Thumb Code    24  mf_config.o(.text.HFDET_IRQHandler)
-    I2C_Start                                0x00000631   Thumb Code    52  i2c_bitbang.o(.text.I2C_Start)
-    I2C_Stop                                 0x00000665   Thumb Code    44  i2c_bitbang.o(.text.I2C_Stop)
-    I2C_WriteByte                            0x00000691   Thumb Code   120  i2c_bitbang.o(.text.I2C_WriteByte)
-    MF_Clock_Init                            0x0000070d   Thumb Code   196  mf_config.o(.text.MF_Clock_Init)
-    MF_Config_Init                           0x000007dd   Thumb Code   192  mf_config.o(.text.MF_Config_Init)
-    MF_GPIO_Init                             0x000008a1   Thumb Code   248  mf_config.o(.text.MF_GPIO_Init)
-    OLED_Clear                               0x0000099d   Thumb Code   202  oled_i2c.o(.text.OLED_Clear)
-    OLED_HardwareReset                       0x00000a69   Thumb Code    48  oled_i2c.o(.text.OLED_HardwareReset)
-    OLED_Init                                0x00000a9d   Thumb Code   666  oled_i2c.o(.text.OLED_Init)
-    OLED_ShowText                            0x00000d39   Thumb Code    84  oled_draw.o(.text.OLED_ShowText)
-    OLED_WriteData                           0x00000d99   Thumb Code    32  oled_i2c.o(.text.OLED_WriteData)
-    OLED_WriteDataList                       0x00000db9   Thumb Code    46  oled_i2c.o(.text.OLED_WriteDataList)
-    SystemCoreClockUpdate                    0x00000de9   Thumb Code   268  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
-    SystemInit                               0x00000f29   Thumb Code   216  system_fm33lc0xx.o(.text.SystemInit)
-    main                                     0x0000101d   Thumb Code   208  main.o(.text.main)
-    play_beep                                0x00001101   Thumb Code    48  buzzer.o(.text.play_beep)
-    __aeabi_uidiv                            0x00001135   Thumb Code    68  aeabi_sdivfast.o(.text_divfast)
-    __aeabi_idiv                             0x00001179   Thumb Code   434  aeabi_sdivfast.o(.text_divfast)
-    ASCII_0708                               0x0000132a   Data         665  oled_draw.o(.rodata.ASCII_0708)
-    ASCII_1608                               0x000015c3   Data        1520  oled_draw.o(.rodata.ASCII_1608)
-    skull                                    0x00001bb3   Data           8  oled_draw.o(.rodata.skull)
-    Region$$Table$$Base                      0x00001bbc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00001bdc   Number         0  anon$$obj.o(Region$$Table)
+    FL_DelayInit                             0x00000435   Thumb Code    20  fm33lc0xx_fl.o(.text.FL_DelayInit)
+    FL_DelayMs                               0x00000449   Thumb Code    22  fm33lc0xx_fl.o(.text.FL_DelayMs)
+    FL_DelayUs                               0x00000461   Thumb Code    44  fm33lc0xx_fl.o(.text.FL_DelayUs)
+    FL_EXTI_CommonInit                       0x00000491   Thumb Code    48  fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit)
+    FL_EXTI_Init                             0x000004c9   Thumb Code   324  fm33lc0xx_fl_exti.o(.text.FL_EXTI_Init)
+    FL_GPIO_Init                             0x00000665   Thumb Code   232  fm33lc0xx_fl_gpio.o(.text.FL_GPIO_Init)
+    FL_Init                                  0x00000823   Thumb Code     8  fm33lc0xx_fl.o(.text.FL_Init)
+    FL_NVIC_Init                             0x0000082d   Thumb Code    96  fm33lc0xx_fl.o(.text.FL_NVIC_Init)
+    GPIO_IRQHandler                          0x0000089d   Thumb Code   176  gpio_interrupt.o(.text.GPIO_IRQHandler)
+    HFDET_IRQHandler                         0x00000951   Thumb Code    24  mf_config.o(.text.HFDET_IRQHandler)
+    I2C_Start                                0x0000096d   Thumb Code    52  i2c_bitbang.o(.text.I2C_Start)
+    I2C_Stop                                 0x000009a1   Thumb Code    44  i2c_bitbang.o(.text.I2C_Stop)
+    I2C_WriteByte                            0x000009cd   Thumb Code   120  i2c_bitbang.o(.text.I2C_WriteByte)
+    MF_Clock_Init                            0x00000a49   Thumb Code   196  mf_config.o(.text.MF_Clock_Init)
+    MF_Config_Init                           0x00000b19   Thumb Code   328  mf_config.o(.text.MF_Config_Init)
+    MF_GPIO_Init                             0x00000c69   Thumb Code   184  mf_config.o(.text.MF_GPIO_Init)
+    OLED_Clear                               0x00000d25   Thumb Code   202  oled_i2c.o(.text.OLED_Clear)
+    OLED_HardwareReset                       0x00000df1   Thumb Code    48  oled_i2c.o(.text.OLED_HardwareReset)
+    OLED_Init                                0x00000e25   Thumb Code   666  oled_i2c.o(.text.OLED_Init)
+    OLED_ShowText                            0x000010c1   Thumb Code    84  oled_draw.o(.text.OLED_ShowText)
+    OLED_WriteData                           0x00001121   Thumb Code    32  oled_i2c.o(.text.OLED_WriteData)
+    OLED_WriteDataList                       0x00001141   Thumb Code    46  oled_i2c.o(.text.OLED_WriteDataList)
+    SystemCoreClockUpdate                    0x00001171   Thumb Code   268  system_fm33lc0xx.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x000012b1   Thumb Code   216  system_fm33lc0xx.o(.text.SystemInit)
+    main                                     0x000013a5   Thumb Code    48  main.o(.text.main)
+    play_beep                                0x000013e1   Thumb Code    48  buzzer.o(.text.play_beep)
+    play_click                               0x00001411   Thumb Code    48  buzzer.o(.text.play_click)
+    play_click_500us                         0x00001441   Thumb Code    48  buzzer.o(.text.play_click_500us)
+    __aeabi_uidiv                            0x00001475   Thumb Code    68  aeabi_sdivfast.o(.text_divfast)
+    __aeabi_idiv                             0x000014b9   Thumb Code   434  aeabi_sdivfast.o(.text_divfast)
+    ASCII_0708                               0x0000166a   Data         665  oled_draw.o(.rodata.ASCII_0708)
+    ASCII_1608                               0x00001903   Data        1520  oled_draw.o(.rodata.ASCII_1608)
+    skull                                    0x00001ef3   Data           8  oled_draw.o(.rodata.skull)
+    Region$$Table$$Base                      0x00001efc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001f1c   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_fm33lc0xx.o(.data.SystemCoreClock)
     XTHFClock                                0x20000004   Data           4  system_fm33lc0xx.o(.data.XTHFClock)
     XTLFClock                                0x20000008   Data           4  system_fm33lc0xx.o(.data.XTLFClock)
@@ -1367,118 +1443,139 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00001bf0, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00001f30, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001bdc, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001f1c, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x000000c0   Data   RO            3    RESET               startup_fm33lc0xx.o
-    0x000000c0   0x000000c0   0x00000008   Code   RO          698  * !!!main             c_p.l(__main.o)
-    0x000000c8   0x000000c8   0x00000054   Code   RO          934    !!!scatter          c_p.l(__scatter.o)
-    0x0000011c   0x0000011c   0x0000001a   Code   RO          938    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x000000c0   0x000000c0   0x00000008   Code   RO          722  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x00000054   Code   RO          958    !!!scatter          c_p.l(__scatter.o)
+    0x0000011c   0x0000011c   0x0000001a   Code   RO          962    !!handler_copy      c_p.l(__scatter_copy.o)
     0x00000136   0x00000136   0x00000002   PAD
-    0x00000138   0x00000138   0x00000002   Code   RO          935    !!handler_null      c_p.l(__scatter.o)
+    0x00000138   0x00000138   0x00000002   Code   RO          959    !!handler_null      c_p.l(__scatter.o)
     0x0000013a   0x0000013a   0x00000002   PAD
-    0x0000013c   0x0000013c   0x0000001c   Code   RO          940    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x00000158   0x00000158   0x00000002   Code   RO          789    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          807    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          809    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          811    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          814    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          816    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          818    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          821    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          823    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          825    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          827    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          829    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          831    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          833    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          835    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          837    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          839    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          841    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          845    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          847    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          849    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO          851    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
-    0x0000015a   0x0000015a   0x00000002   Code   RO          852    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
-    0x0000015c   0x0000015c   0x00000002   Code   RO          889    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          917    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          919    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          922    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          925    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          927    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO          930    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x0000015e   0x0000015e   0x00000002   Code   RO          931    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x00000160   0x00000160   0x00000000   Code   RO          744    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x00000160   0x00000160   0x00000000   Code   RO          757    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x00000160   0x00000160   0x00000006   Code   RO          769    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x00000166   0x00000166   0x00000000   Code   RO          759    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x00000166   0x00000166   0x00000004   Code   RO          760    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x0000016a   0x0000016a   0x00000000   Code   RO          762    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x0000016a   0x0000016a   0x00000008   Code   RO          763    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x00000172   0x00000172   0x00000002   Code   RO          798    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x00000174   0x00000174   0x00000000   Code   RO          860    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x00000174   0x00000174   0x00000004   Code   RO          861    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x00000178   0x00000178   0x00000006   Code   RO          862    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x0000013c   0x0000013c   0x0000001c   Code   RO          964    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x00000158   0x00000158   0x00000002   Code   RO          813    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          831    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          833    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          835    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          838    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          840    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          842    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          845    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          847    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          849    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          851    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          853    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          855    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          857    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          859    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          861    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          863    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          865    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          869    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          871    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          873    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO          875    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x0000015a   0x0000015a   0x00000002   Code   RO          876    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x0000015c   0x0000015c   0x00000002   Code   RO          913    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          941    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          943    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          946    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          949    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          951    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO          954    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x0000015e   0x0000015e   0x00000002   Code   RO          955    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x00000160   0x00000160   0x00000000   Code   RO          768    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x00000160   0x00000160   0x00000000   Code   RO          781    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x00000160   0x00000160   0x00000006   Code   RO          793    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x00000166   0x00000166   0x00000000   Code   RO          783    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x00000166   0x00000166   0x00000004   Code   RO          784    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0000016a   0x0000016a   0x00000000   Code   RO          786    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0000016a   0x0000016a   0x00000008   Code   RO          787    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x00000172   0x00000172   0x00000002   Code   RO          822    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000174   0x00000174   0x00000000   Code   RO          884    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000174   0x00000174   0x00000004   Code   RO          885    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x00000178   0x00000178   0x00000006   Code   RO          886    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x0000017e   0x0000017e   0x00000002   PAD
     0x00000180   0x00000180   0x00000038   Code   RO            4    .text               startup_fm33lc0xx.o
-    0x000001b8   0x000001b8   0x00000006   Code   RO          696    .text               c_p.l(heapauxi.o)
-    0x000001be   0x000001be   0x0000003e   Code   RO          775    .text               c_p.l(sys_stackheap_outer.o)
-    0x000001fc   0x000001fc   0x00000010   Code   RO          778    .text               c_p.l(exit.o)
-    0x0000020c   0x0000020c   0x00000008   Code   RO          794    .text               c_p.l(libspace.o)
-    0x00000214   0x00000214   0x0000000c   Code   RO          855    .text               c_p.l(sys_exit.o)
-    0x00000220   0x00000220   0x00000002   Code   RO          878    .text               c_p.l(use_no_semi.o)
-    0x00000222   0x00000222   0x00000000   Code   RO          880    .text               c_p.l(indicate_semi.o)
+    0x000001b8   0x000001b8   0x00000006   Code   RO          720    .text               c_p.l(heapauxi.o)
+    0x000001be   0x000001be   0x0000003e   Code   RO          799    .text               c_p.l(sys_stackheap_outer.o)
+    0x000001fc   0x000001fc   0x00000010   Code   RO          802    .text               c_p.l(exit.o)
+    0x0000020c   0x0000020c   0x00000008   Code   RO          818    .text               c_p.l(libspace.o)
+    0x00000214   0x00000214   0x0000000c   Code   RO          879    .text               c_p.l(sys_exit.o)
+    0x00000220   0x00000220   0x00000002   Code   RO          902    .text               c_p.l(use_no_semi.o)
+    0x00000222   0x00000222   0x00000000   Code   RO          904    .text               c_p.l(indicate_semi.o)
     0x00000222   0x00000222   0x00000002   PAD
-    0x00000224   0x00000224   0x00000054   Code   RO          510    .text.FL_ADC_CommonInit  fm33lc0xx_fl_adc.o
-    0x00000278   0x00000278   0x000001b4   Code   RO          516    .text.FL_ADC_Init   fm33lc0xx_fl_adc.o
-    0x0000042c   0x0000042c   0x00000014   Code   RO          333    .text.FL_DelayInit  fm33lc0xx_fl.o
-    0x00000440   0x00000440   0x00000016   Code   RO          337    .text.FL_DelayMs    fm33lc0xx_fl.o
-    0x00000456   0x00000456   0x00000002   PAD
-    0x00000458   0x00000458   0x00000038   Code   RO          335    .text.FL_DelayUs    fm33lc0xx_fl.o
-    0x00000490   0x00000490   0x000000f4   Code   RO          460    .text.FL_GPIO_Init  fm33lc0xx_fl_gpio.o
-    0x00000584   0x00000584   0x00000008   Code   RO          345    .text.FL_Init       fm33lc0xx_fl.o
-    0x0000058c   0x0000058c   0x00000088   Code   RO          464    .text.FL_WKUP_Init  fm33lc0xx_fl_gpio.o
-    0x00000614   0x00000614   0x0000001c   Code   RO           23    .text.HFDET_IRQHandler  mf_config.o
-    0x00000630   0x00000630   0x00000034   Code   RO           53    .text.I2C_Start     i2c_bitbang.o
-    0x00000664   0x00000664   0x0000002c   Code   RO           55    .text.I2C_Stop      i2c_bitbang.o
-    0x00000690   0x00000690   0x0000007c   Code   RO           57    .text.I2C_WriteByte  i2c_bitbang.o
-    0x0000070c   0x0000070c   0x000000d0   Code   RO           25    .text.MF_Clock_Init  mf_config.o
-    0x000007dc   0x000007dc   0x000000c4   Code   RO           27    .text.MF_Config_Init  mf_config.o
-    0x000008a0   0x000008a0   0x000000fc   Code   RO           11    .text.MF_GPIO_Init  mf_config.o
-    0x0000099c   0x0000099c   0x000000ca   Code   RO           97    .text.OLED_Clear    oled_i2c.o
-    0x00000a66   0x00000a66   0x00000002   PAD
-    0x00000a68   0x00000a68   0x00000034   Code   RO           81    .text.OLED_HardwareReset  oled_i2c.o
-    0x00000a9c   0x00000a9c   0x0000029a   Code   RO           89    .text.OLED_Init     oled_i2c.o
-    0x00000d36   0x00000d36   0x00000002   PAD
-    0x00000d38   0x00000d38   0x00000060   Code   RO          109    .text.OLED_ShowText  oled_draw.o
-    0x00000d98   0x00000d98   0x00000020   Code   RO           85    .text.OLED_WriteData  oled_i2c.o
-    0x00000db8   0x00000db8   0x0000002e   Code   RO           87    .text.OLED_WriteDataList  oled_i2c.o
-    0x00000de6   0x00000de6   0x00000002   PAD
-    0x00000de8   0x00000de8   0x00000140   Code   RO          124    .text.SystemCoreClockUpdate  system_fm33lc0xx.o
-    0x00000f28   0x00000f28   0x000000f4   Code   RO          126    .text.SystemInit    system_fm33lc0xx.o
-    0x0000101c   0x0000101c   0x000000e4   Code   RO           41    .text.main          main.o
-    0x00001100   0x00001100   0x00000034   Code   RO           67    .text.play_beep     buzzer.o
-    0x00001134   0x00001134   0x000001f6   Code   RO          689    .text_divfast       c_p.l(aeabi_sdivfast.o)
-    0x0000132a   0x0000132a   0x00000299   Data   RO          111    .rodata.ASCII_0708  oled_draw.o
-    0x000015c3   0x000015c3   0x000005f0   Data   RO          115    .rodata.ASCII_1608  oled_draw.o
-    0x00001bb3   0x00001bb3   0x00000008   Data   RO          112    .rodata.skull       oled_draw.o
-    0x00001bbb   0x00001bbb   0x00000001   PAD
-    0x00001bbc   0x00001bbc   0x00000020   Data   RO          933    Region$$Table       anon$$obj.o
+    0x00000224   0x00000224   0x00000054   Code   RO          534    .text.FL_ADC_CommonInit  fm33lc0xx_fl_adc.o
+    0x00000278   0x00000278   0x000001bc   Code   RO          540    .text.FL_ADC_Init   fm33lc0xx_fl_adc.o
+    0x00000434   0x00000434   0x00000014   Code   RO          357    .text.FL_DelayInit  fm33lc0xx_fl.o
+    0x00000448   0x00000448   0x00000016   Code   RO          361    .text.FL_DelayMs    fm33lc0xx_fl.o
+    0x0000045e   0x0000045e   0x00000002   PAD
+    0x00000460   0x00000460   0x00000030   Code   RO          359    .text.FL_DelayUs    fm33lc0xx_fl.o
+    0x00000490   0x00000490   0x00000038   Code   RO          163    .text.FL_EXTI_CommonInit  fm33lc0xx_fl_exti.o
+    0x000004c8   0x000004c8   0x0000019c   Code   RO          169    .text.FL_EXTI_Init  fm33lc0xx_fl_exti.o
+    0x00000664   0x00000664   0x000000f4   Code   RO          484    .text.FL_GPIO_Init  fm33lc0xx_fl_gpio.o
+    0x00000758   0x00000758   0x0000000c   Code   RO          175    .text.FL_GPIO_SetExtiLine0  fm33lc0xx_fl_exti.o
+    0x00000764   0x00000764   0x0000000c   Code   RO          177    .text.FL_GPIO_SetExtiLine1  fm33lc0xx_fl_exti.o
+    0x00000770   0x00000770   0x0000000e   Code   RO          195    .text.FL_GPIO_SetExtiLine10  fm33lc0xx_fl_exti.o
+    0x0000077e   0x0000077e   0x0000000e   Code   RO          197    .text.FL_GPIO_SetExtiLine11  fm33lc0xx_fl_exti.o
+    0x0000078c   0x0000078c   0x0000000e   Code   RO          199    .text.FL_GPIO_SetExtiLine12  fm33lc0xx_fl_exti.o
+    0x0000079a   0x0000079a   0x0000000e   Code   RO          201    .text.FL_GPIO_SetExtiLine13  fm33lc0xx_fl_exti.o
+    0x000007a8   0x000007a8   0x0000000e   Code   RO          203    .text.FL_GPIO_SetExtiLine14  fm33lc0xx_fl_exti.o
+    0x000007b6   0x000007b6   0x0000000c   Code   RO          179    .text.FL_GPIO_SetExtiLine2  fm33lc0xx_fl_exti.o
+    0x000007c2   0x000007c2   0x0000000c   Code   RO          181    .text.FL_GPIO_SetExtiLine3  fm33lc0xx_fl_exti.o
+    0x000007ce   0x000007ce   0x0000000e   Code   RO          183    .text.FL_GPIO_SetExtiLine4  fm33lc0xx_fl_exti.o
+    0x000007dc   0x000007dc   0x0000000e   Code   RO          185    .text.FL_GPIO_SetExtiLine5  fm33lc0xx_fl_exti.o
+    0x000007ea   0x000007ea   0x0000000e   Code   RO          187    .text.FL_GPIO_SetExtiLine6  fm33lc0xx_fl_exti.o
+    0x000007f8   0x000007f8   0x0000000e   Code   RO          189    .text.FL_GPIO_SetExtiLine7  fm33lc0xx_fl_exti.o
+    0x00000806   0x00000806   0x0000000e   Code   RO          191    .text.FL_GPIO_SetExtiLine8  fm33lc0xx_fl_exti.o
+    0x00000814   0x00000814   0x0000000e   Code   RO          193    .text.FL_GPIO_SetExtiLine9  fm33lc0xx_fl_exti.o
+    0x00000822   0x00000822   0x00000008   Code   RO          369    .text.FL_Init       fm33lc0xx_fl.o
+    0x0000082a   0x0000082a   0x00000002   PAD
+    0x0000082c   0x0000082c   0x00000070   Code   RO          371    .text.FL_NVIC_Init  fm33lc0xx_fl.o
+    0x0000089c   0x0000089c   0x000000b4   Code   RO          139    .text.GPIO_IRQHandler  gpio_interrupt.o
+    0x00000950   0x00000950   0x0000001c   Code   RO           33    .text.HFDET_IRQHandler  mf_config.o
+    0x0000096c   0x0000096c   0x00000034   Code   RO           82    .text.I2C_Start     i2c_bitbang.o
+    0x000009a0   0x000009a0   0x0000002c   Code   RO           84    .text.I2C_Stop      i2c_bitbang.o
+    0x000009cc   0x000009cc   0x0000007c   Code   RO           86    .text.I2C_WriteByte  i2c_bitbang.o
+    0x00000a48   0x00000a48   0x000000d0   Code   RO           35    .text.MF_Clock_Init  mf_config.o
+    0x00000b18   0x00000b18   0x00000150   Code   RO           37    .text.MF_Config_Init  mf_config.o
+    0x00000c68   0x00000c68   0x000000bc   Code   RO           11    .text.MF_GPIO_Init  mf_config.o
+    0x00000d24   0x00000d24   0x000000ca   Code   RO          129    .text.OLED_Clear    oled_i2c.o
+    0x00000dee   0x00000dee   0x00000002   PAD
+    0x00000df0   0x00000df0   0x00000034   Code   RO          113    .text.OLED_HardwareReset  oled_i2c.o
+    0x00000e24   0x00000e24   0x0000029a   Code   RO          121    .text.OLED_Init     oled_i2c.o
+    0x000010be   0x000010be   0x00000002   PAD
+    0x000010c0   0x000010c0   0x00000060   Code   RO           98    .text.OLED_ShowText  oled_draw.o
+    0x00001120   0x00001120   0x00000020   Code   RO          117    .text.OLED_WriteData  oled_i2c.o
+    0x00001140   0x00001140   0x0000002e   Code   RO          119    .text.OLED_WriteDataList  oled_i2c.o
+    0x0000116e   0x0000116e   0x00000002   PAD
+    0x00001170   0x00001170   0x00000140   Code   RO          148    .text.SystemCoreClockUpdate  system_fm33lc0xx.o
+    0x000012b0   0x000012b0   0x000000f4   Code   RO          150    .text.SystemInit    system_fm33lc0xx.o
+    0x000013a4   0x000013a4   0x0000003c   Code   RO           51    .text.main          main.o
+    0x000013e0   0x000013e0   0x00000030   Code   RO           60    .text.play_beep     buzzer.o
+    0x00001410   0x00001410   0x00000030   Code   RO           62    .text.play_click    buzzer.o
+    0x00001440   0x00001440   0x00000034   Code   RO           66    .text.play_click_500us  buzzer.o
+    0x00001474   0x00001474   0x000001f6   Code   RO          713    .text_divfast       c_p.l(aeabi_sdivfast.o)
+    0x0000166a   0x0000166a   0x00000299   Data   RO          100    .rodata.ASCII_0708  oled_draw.o
+    0x00001903   0x00001903   0x000005f0   Data   RO          104    .rodata.ASCII_1608  oled_draw.o
+    0x00001ef3   0x00001ef3   0x00000008   Data   RO          101    .rodata.skull       oled_draw.o
+    0x00001efb   0x00001efb   0x00000001   PAD
+    0x00001efc   0x00001efc   0x00000020   Data   RO          957    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00001be0, Size: 0x00001070, Max: 0x00006000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00001f20, Size: 0x00001070, Max: 0x00006000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00001be0   0x00000004   Data   RW          130    .data.SystemCoreClock  system_fm33lc0xx.o
-    0x20000004   0x00001be4   0x00000004   Data   RW          129    .data.XTHFClock     system_fm33lc0xx.o
-    0x20000008   0x00001be8   0x00000004   Data   RW          128    .data.XTLFClock     system_fm33lc0xx.o
-    0x2000000c   0x00001bec   0x00000004   PAD
-    0x20000010        -       0x00000060   Zero   RW          795    .bss                c_p.l(libspace.o)
+    0x20000000   0x00001f20   0x00000004   Data   RW          154    .data.SystemCoreClock  system_fm33lc0xx.o
+    0x20000004   0x00001f24   0x00000004   Data   RW          153    .data.XTHFClock     system_fm33lc0xx.o
+    0x20000008   0x00001f28   0x00000004   Data   RW          152    .data.XTLFClock     system_fm33lc0xx.o
+    0x2000000c   0x00001f2c   0x00000004   PAD
+    0x20000010        -       0x00000060   Zero   RW          819    .bss                c_p.l(libspace.o)
     0x20000070        -       0x00000800   Zero   RW            2    HEAP                startup_fm33lc0xx.o
     0x20000870        -       0x00000800   Zero   RW            1    STACK               startup_fm33lc0xx.o
 
@@ -1490,22 +1587,24 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        52          4          0          0          0       4032   buzzer.o
-       106         12          0          0          0       3950   fm33lc0xx_fl.o
-       520         16          0          0          0       7641   fm33lc0xx_fl_adc.o
-       380         84          0          0          0       7745   fm33lc0xx_fl_gpio.o
-       220          4          0          0          0       2544   i2c_bitbang.o
-       228         20          0          0          0       2034   main.o
-       684         24          0          0          0       8366   mf_config.o
-        96         12       2193          0          0       1986   oled_draw.o
-       998          4          0          0          0       5435   oled_i2c.o
-        56         26        192          0       4096        740   startup_fm33lc0xx.o
-       564        104          0         12          0       3077   system_fm33lc0xx.o
+       148          4          0          0          0       4929   buzzer.o
+       210         20          0          0          0       3956   fm33lc0xx_fl.o
+       528         24          0          0          0       7647   fm33lc0xx_fl_adc.o
+       670        160          0          0          0       8107   fm33lc0xx_fl_exti.o
+       244         12          0          0          0       7751   fm33lc0xx_fl_gpio.o
+       180          4          0          0          0       2477   gpio_interrupt.o
+       220          4          0          0          0       2550   i2c_bitbang.o
+        60         12          0          0          0        513   main.o
+       760         28          0          0          0      11021   mf_config.o
+        96         12       2193          0          0       1992   oled_draw.o
+       998          4          0          0          0       5441   oled_i2c.o
+        56         26        192          0       4096        748   startup_fm33lc0xx.o
+       564        104          0         12          0       3083   system_fm33lc0xx.o
 
     ----------------------------------------------------------------------
-      3912        310       2418         12       4100      47550   Object Totals
+      4744        414       2418         12       4100      60215   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         8          0          1          0          4          0   (incl. Padding)
+        10          0          1          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1553,15 +1652,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4714        328       2418         12       4196      47934   Grand Totals
-      4714        328       2418         12       4196      47934   ELF Image Totals
-      4714        328       2418         12          0          0   ROM Totals
+      5546        432       2418         12       4196      60559   Grand Totals
+      5546        432       2418         12       4196      60559   ELF Image Totals
+      5546        432       2418         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 7132 (   6.96kB)
+    Total RO  Size (Code + RO Data)                 7964 (   7.78kB)
     Total RW  Size (RW Data + ZI Data)              4208 (   4.11kB)
-    Total ROM Size (Code + RO Data + RW Data)       7144 (   6.98kB)
+    Total ROM Size (Code + RO Data + RW Data)       7976 (   7.79kB)
 
 ==============================================================================
 

@@ -26,7 +26,8 @@
 #include "outputs.h"
 #include "buzzer.h"
 #include "oled_i2c.h"
-#include "oled_Draw.h"
+#include "oled_draw.h"
+#include "gpio_interrupt.h"
 
 /**    
 * Chip Series: FM33LC0xx;
@@ -49,60 +50,26 @@ int main(void)
     /* Initialize all configured peripherals including SWD, all GPIOs, I2C soft pins, WKUP2  */
     MF_Config_Init();
 	
-	
 		/* Initialize OLED */
 		OLED_HardwareReset();  // Perform hardware reset first
 		OLED_Init();
 		OLED_Clear();
 
+		/*Show something on oled */
+		OLED_ShowText(10,10,"Hecked ",7);
+		OLED_WriteDataList(skull, sizeof(skull));
+	
+//		// W.I.P. - Radioactive decay simulation
+//    double half_life = 10.0;  // 10 seconds half-life
+//    double duration = 60.0;   // Run for 60 seconds
+//    int initial_atoms = 1000;
 
+//    simulate_radioactive_decay(half_life, duration, initial_atoms);
+		
     while(1)
     {
-			if(READ_POWER_BTN() == 0)
-				{
-					if(READ_POWER_EN() == 0)
-					{
-						POWER_EN_ON(); //Enable battery source
-						play_beep(); //Play a beep
-						LED2_ON(); //Turn on Green LED
-						FL_DelayMs(1000);
-						LED2_OFF();
-					}
-					else if(READ_POWER_EN() == 1)
-					{
-						play_beep(); //play a goodbye beep
-						FL_DelayMs(500);
-						play_beep();
-						POWER_EN_OFF(); //Disable battery source
-					}
-				}
 			
-			// Check if button is pressed (active low because of pull-up)
-			if(READ_MENU_PIN() == 0)
-			{	
-				
-				// Infinite beep loop
-				int t = 1;
-				while(t == 1)
-				{
-					if(READ_MENU_PIN() == 0) //Exit loop if button pressed again - WIP not working
-					{
-						t = 0;
-					}
-					play_beep();
-					LED1_ON(); //LED1 red in sync with beep
-					FL_DelayMs(500);
-					
-					play_beep();
-					LED1_OFF();
-					FL_DelayMs(1000);
-							
-					OLED_ShowText(10,10,"Hecked ",7);
-					OLED_WriteDataList(skull, sizeof(skull));
-				}
-			}
     }
 
 }
-
 

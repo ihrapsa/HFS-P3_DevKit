@@ -1,3 +1,6 @@
+
+//redundant since IRQ replaces these declarations
+
 #ifndef __INPUTS_H__
 #define __INPUTS_H__
 

@@ -214,6 +214,22 @@ loadbin C:\path\of\the\file_to_flash.bin, 0x0
 ![alt text](img/download.png)  
 
 :exclamation:__*Note:*__
-Sometimes, in my case, I had to start `J-Link Commander`, establish a connection with it and only then Keil uVision would detect the MCU.
+
+> [!NOTE]
+> Sometimes, in my case, I had to start `J-Link Commander`, establish a connection with it and only then Keil uVision would detect the MCU.  
+
+
+
+> [!IMPORTANT]
+> These are my current Keil v5 debug settings. Note that Keil uses `J-Link v7.54` here (actually a [patched](resources/JFlash/Fudan%20Devices%20List/JLinkARM/) version of `v7.54`  that removes the blacklist on chinese clones). Using the `v6.12` version of JLink in Keil resulted in some errors and inconsistancies. I ended up using the patched `v7.54` of `JLink_ARM.dll` with `JLinkDevices.xml` + `Devices/FMSH` inside the installation path of Keil`[..]/Keil_v5/ARM/Segger`.  
+
+
+
+![alt text](img/project_debug_settings.png)  
+![alt text](/img/keil_jllink_arm.png)  
+
+To make Keil communicate with the device I still had to establish a succesfull connection using `JLink Commander v6.12`. Once that's connected, Keil with `v7.54` will work and flashing from it or debugging will work.  
+
+*As you can see, using a chinese clone with software that fights piracy and hardware clones is quite a nightmare.*
 
 </details>
