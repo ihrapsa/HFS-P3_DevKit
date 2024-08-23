@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\HFS-P3_base_configured.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\HFS-P3_base_configured.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Aug 15 13:24:43 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri Aug 23 14:14:06 2024
 <BR><P>
 <H3>Maximum Stack Usage =        164 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -429,8 +429,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IRQHandler
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_HardwareReset
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_HardwareReset
 </UL>
 
 <P><STRONG><a name="[4b]"></a>FL_DelayUs</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, fm33lc0xx_fl.o(.text.FL_DelayUs))
@@ -438,10 +437,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
+<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_click_500us
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_click
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_beep
@@ -503,8 +502,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteDataList
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_SetCursor
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
 <P><STRONG><a name="[54]"></a>I2C_Stop</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, i2c_bitbang.o(.text.I2C_Stop))
@@ -514,8 +513,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteDataList
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_SetCursor
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
 <P><STRONG><a name="[55]"></a>I2C_WriteByte</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, i2c_bitbang.o(.text.I2C_WriteByte))
@@ -525,8 +524,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteData
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteDataList
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_SetCursor
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
 <P><STRONG><a name="[56]"></a>MF_Clock_Init</STRONG> (Thumb, 196 bytes, Stack size 40 bytes, mf_config.o(.text.MF_Clock_Init))
@@ -560,17 +559,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MF_Config_Init
 </UL>
 
-<P><STRONG><a name="[5f]"></a>OLED_Clear</STRONG> (Thumb, 202 bytes, Stack size 16 bytes, oled_i2c.o(.text.OLED_Clear))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OLED_Clear &rArr; I2C_WriteByte &rArr; FL_DelayUs
-</UL>
-<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
-</UL>
-<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[60]"></a>OLED_HardwareReset</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, oled_i2c.o(.text.OLED_HardwareReset))
+<P><STRONG><a name="[5f]"></a>OLED_HardwareReset</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, oled_i2c.o(.text.OLED_HardwareReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OLED_HardwareReset &rArr; FL_DelayMs &rArr; FL_DelayUs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
@@ -578,13 +567,22 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[61]"></a>OLED_Init</STRONG> (Thumb, 666 bytes, Stack size 16 bytes, oled_i2c.o(.text.OLED_Init))
+<P><STRONG><a name="[60]"></a>OLED_Init</STRONG> (Thumb, 746 bytes, Stack size 16 bytes, oled_i2c.o(.text.OLED_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OLED_Init &rArr; I2C_WriteByte &rArr; FL_DelayUs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
+</UL>
+<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[61]"></a>OLED_SetCursor</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, oled_i2c.o(.text.OLED_SetCursor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = OLED_SetCursor &rArr; I2C_WriteByte &rArr; FL_DelayUs
+</UL>
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -633,14 +631,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(.text)
 </UL>
-<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[40]"></a>main</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = main &rArr; MF_Config_Init &rArr; MF_GPIO_Init &rArr; FL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WriteDataList
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowText
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_HardwareReset
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_SetCursor
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_HardwareReset
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_Init
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MF_Config_Init
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MF_Clock_Init

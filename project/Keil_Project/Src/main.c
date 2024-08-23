@@ -53,18 +53,15 @@ int main(void)
 		/* Initialize OLED */
 		OLED_HardwareReset();  // Perform hardware reset first
 		OLED_Init();
-		OLED_Clear();
-
+		//OLED_Clear(); //Already in OLED_Init()
+		
 		/*Show something on oled */
-		OLED_ShowText(10,10,"Hecked ",7);
+		OLED_SetCursor(15, 15);
+		OLED_ShowText("Hecked ",7);
+		OLED_ShowText("Hecked ",7);
+		OLED_ShowText("Hecked ",7);
+		OLED_ShowText("150mSv/h ",7);
 		OLED_WriteDataList(skull, sizeof(skull));
-	
-//		// W.I.P. - Radioactive decay simulation
-//    double half_life = 10.0;  // 10 seconds half-life
-//    double duration = 60.0;   // Run for 60 seconds
-//    int initial_atoms = 1000;
-
-//    simulate_radioactive_decay(half_life, duration, initial_atoms);
 		
     while(1)
     {

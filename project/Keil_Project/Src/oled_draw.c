@@ -1,13 +1,12 @@
 #include "oled_i2c.h"
 #include "oled_draw.h"
 
-void OLED_ShowChar(uint8_t x, uint8_t y, char ch, uint8_t Size)
+void OLED_ShowChar(char ch, uint8_t Size)
 {  
     uint8_t Data = 0;
 
     for(uint8_t i = 0; i < Size; i++)
     {
-        // OLED_SetPosition(x + i, y);
 
         if(Size == 7)
         {
@@ -22,10 +21,10 @@ void OLED_ShowChar(uint8_t x, uint8_t y, char ch, uint8_t Size)
     }
 }
 
-void OLED_ShowText(uint8_t x, uint8_t y, const char *word, uint8_t Size)
+void OLED_ShowText(const char *word, uint8_t Size)
 {
 	 while (*word != '\0') {
-      OLED_ShowChar(x, y, *word, Size);  // Write character to OLED
+      OLED_ShowChar(*word, Size);  // Write character to OLED
       word++;  // Move to the next character in the word
     }
 

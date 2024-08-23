@@ -7,7 +7,7 @@
 
 void GPIO_IRQHandler(void)
 {
-	
+		// Enable GM tube on button press
     if(FL_GPIO_IsActiveFlag_EXTI(GPIO, MENU_BTN))
     {
         FL_GPIO_ClearFlag_EXTI(GPIO, MENU_BTN);
@@ -19,6 +19,7 @@ void GPIO_IRQHandler(void)
 				
     }
 		
+		// Click buzzer on radioactive decay
 		if(FL_GPIO_IsActiveFlag_EXTI(GPIO, GM_PULSE))
     {
         FL_GPIO_ClearFlag_EXTI(GPIO, GM_PULSE);
@@ -31,6 +32,7 @@ void GPIO_IRQHandler(void)
 				
     }
 		
+		// Power on/off sequence
 		if(FL_GPIO_IsActiveFlag_EXTI(GPIO, POWER_BTN))
     {
         FL_GPIO_ClearFlag_EXTI(GPIO, POWER_BTN);

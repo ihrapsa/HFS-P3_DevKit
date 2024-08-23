@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 
-void OLED_ShowChar(uint8_t x, uint8_t y, char ch, uint8_t Size);
-void OLED_ShowText(uint8_t x, uint8_t y, const char *word, uint8_t Size);
+void OLED_ShowChar(char ch, uint8_t Size);
+void OLED_ShowText(const char *word, uint8_t Size);
 
 extern const uint8_t skull[8];
 
