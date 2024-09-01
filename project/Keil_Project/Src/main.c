@@ -74,13 +74,13 @@ int main(void)
 			char VoltageStr[10];
 			snprintf(VoltageStr, sizeof(VoltageStr), "%.3f V", BattVoltage);
 			
-			OLED_Clear();
+			//OLED_Clear();
 			OLED_SetCursor(15, 15);
 			OLED_ShowText(VoltageStr ,7);
 			
 			// Get Internal Temperature
 			
-			float GetT = GetTS_POLL();
+			float GetT = GetTS_IRQ();
 			char TempStr[10];
 			snprintf(TempStr, sizeof(TempStr), "%.2f *C", GetT);
 			

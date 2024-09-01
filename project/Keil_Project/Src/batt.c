@@ -1,4 +1,5 @@
 #include "adc.h"
+#include "batt.h"
 
 /* VOUT = VIN * R2/(R1+R2) */
 /* VIN = VOUT * (R1+R2)/R2 */

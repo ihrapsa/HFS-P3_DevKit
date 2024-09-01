@@ -39,7 +39,7 @@ I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_u7816.h)(0x66BB958E)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h)(0x66BB9590)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h)(0x66BB958F)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h)(0x66BB958E)
-F (../Src/main.c)(0x66D47DB9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/main.o -MMD)
+F (../Src/main.c)(0x66D4D411)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/main.o -MMD)
 I (..\Inc\main.h)(0x66BB958C)
 I (..\MF-config\Inc\mf_config.h)(0x66BB9595)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h)(0x66BB9591)
@@ -86,9 +86,9 @@ I (..\Inc\buzzer.h)(0x66C4ECD2)
 I (..\Inc\oled_i2c.h)(0x66C85245)
 I (..\Inc\oled_draw.h)(0x66C4FB49)
 I (..\Inc\gpio_interrupt.h)(0x66BBA034)
-I (..\Inc\adc.h)(0x66D47CB3)
+I (..\Inc\adc.h)(0x66D4C3A4)
 I (..\Inc\batt.h)(0x66D46CAB)
-I (..\Inc\temp.h)(0x66D48072)
+I (..\Inc\temp.h)(0x66D4C4DD)
 F (../Inc/fm33_assert.h)(0x66BB958C)()
 F (..\Src\buzzer.c)(0x66C4ECC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/buzzer.o -MMD)
 I (..\Inc\buzzer.h)(0x66C4ECD2)
@@ -183,7 +183,7 @@ I (..\Drivers\CMSIS\Device\FM\FM33xx\Include\core_cm0plus.h)(0x66BB958E)
 I (..\Drivers\CMSIS\Device\FM\FM33xx\Include\system_fm33lc0xx.h)(0x66BB958D)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33_assert.h)(0x66BB9590)
 I (..\Inc\oled_draw.h)(0x66C4FB49)
-F (..\Src\oled_i2c.c)(0x66C8D121)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/oled_i2c.o -MMD)
+F (..\Src\oled_i2c.c)(0x66D4D1F2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/oled_i2c.o -MMD)
 I (..\Inc\i2c_bitbang.h)(0x66B94417)
 I (..\Inc\main.h)(0x66BB958C)
 I (..\MF-config\Inc\mf_config.h)(0x66BB9595)
@@ -277,8 +277,8 @@ I (..\Inc\buzzer.h)(0x66C4ECD2)
 I (..\Inc\outputs.h)(0x66BA7AA9)
 I (..\Inc\inputs.h)(0x66BB9ED9)
 F (..\Inc\gpio_interrupt.h)(0x66BBA034)()
-F (..\Src\adc.c)(0x66D47CDC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/adc.o -MMD)
-I (..\Inc\adc.h)(0x66D47CB3)
+F (..\Src\adc.c)(0x66D4C9D0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/adc.o -MMD)
+I (..\Inc\adc.h)(0x66D4C3A4)
 I (..\Inc\main.h)(0x66BB958C)
 I (..\MF-config\Inc\mf_config.h)(0x66BB9595)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h)(0x66BB9591)
@@ -318,9 +318,9 @@ I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h)(0x66BB9590)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h)(0x66BB958F)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h)(0x66BB958E)
 I (..\Inc\fm33_assert.h)(0x66BB958C)
-F (..\Inc\adc.h)(0x66D47CB3)()
-F (..\Src\batt.c)(0x66D46E1C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/batt.o -MMD)
-I (..\Inc\adc.h)(0x66D47CB3)
+F (..\Inc\adc.h)(0x66D4C3A4)()
+F (..\Src\batt.c)(0x66D4CC68)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/batt.o -MMD)
+I (..\Inc\adc.h)(0x66D4C3A4)
 I (..\Inc\main.h)(0x66BB958C)
 I (..\MF-config\Inc\mf_config.h)(0x66BB9595)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h)(0x66BB9591)
@@ -360,9 +360,10 @@ I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h)(0x66BB9590)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h)(0x66BB958F)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h)(0x66BB958E)
 I (..\Inc\fm33_assert.h)(0x66BB958C)
+I (..\Inc\batt.h)(0x66D46CAB)
 F (..\Inc\batt.h)(0x66D46CAB)()
-F (..\Src\temp.c)(0x66D4806F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/temp.o -MMD)
-I (..\Inc\temp.h)(0x66D48072)
+F (..\Src\temp.c)(0x66D4C99A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/temp.o -MMD)
+I (..\Inc\temp.h)(0x66D4C4DD)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h)(0x66BB9591)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_conf.h)(0x66BB9590)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_adc.h)(0x66BB9591)
@@ -399,11 +400,11 @@ I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_u7816.h)(0x66BB958E)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h)(0x66BB9590)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h)(0x66BB958F)
 I (..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h)(0x66BB958E)
-I (..\Inc\adc.h)(0x66D47CB3)
+I (..\Inc\adc.h)(0x66D4C3A4)
 I (..\Inc\main.h)(0x66BB958C)
 I (..\MF-config\Inc\mf_config.h)(0x66BB9595)
 I (..\Inc\fm33_assert.h)(0x66BB958C)
-F (..\Inc\temp.h)(0x66D48072)()
+F (..\Inc\temp.h)(0x66D4C4DD)()
 F (../Drivers/CMSIS/Device/FM/FM33xx/Source/system_fm33lc0xx.c)(0x66BB958C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers/CMSIS/Inculde -I ../Drivers/FM33LC0xx_FL_Driver/Inc -I ../Drivers/CMSIS/Device/FM/FM33xx/Include -I ../MF-config/Inc -I ../Inc-IC:/Users/hraps/AppData/Local/Arm/Packs/FMSH/FM33LC0XX_DFP/3.0.4/Device/Include-D__UVISION_VERSION="540" -DFM33LC0xx -DFM33LC0XX -DUSE_FULL_ASSERT-o ./objects/system_fm33lc0xx.o -MMD)
 I (..\Drivers\CMSIS\Device\FM\FM33xx\Include\system_fm33lc0xx.h)(0x66BB958D)
 I (..\Drivers\CMSIS\Device\FM\FM33xx\Include\fm33lc0xx.h)(0x66BB958E)

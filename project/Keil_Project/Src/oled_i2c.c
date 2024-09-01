@@ -86,7 +86,7 @@ void OLED_SetCursor(uint8_t x, uint8_t y)
     uint8_t page = y / 8;
 
 	  // Calculate row offset within the page
-    uint8_t rowOffset = y % 8;
+    uint8_t rowOffset = y % 8; //not used yet
 	
     // Set Column Address
     OLED_WriteCommand(0x21);          // Set Column Address command

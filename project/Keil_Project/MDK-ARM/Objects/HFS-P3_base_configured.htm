@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\HFS-P3_base_configured.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\HFS-P3_base_configured.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Sep  1 17:55:48 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Sep  1 23:52:39 2024
 <BR><P>
 <H3>Maximum Stack Usage =        368 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -23,13 +23,13 @@ Mutually Recursive functions
  <LI><a href="#[3]">SVC_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">SVC_Handler</a><BR>
  <LI><a href="#[4]">PendSV_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[4]">PendSV_Handler</a><BR>
  <LI><a href="#[5]">SysTick_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[5]">SysTick_Handler</a><BR>
- <LI><a href="#[b]">ADC_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[b]">ADC_IRQHandler</a><BR>
+ <LI><a href="#[19]">AES_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[19]">AES_IRQHandler</a><BR>
 </UL>
 <P>
 <H3>
 Function Pointers
 </H3><UL>
- <LI><a href="#[b]">ADC_IRQHandler</a> from startup_fm33lc0xx.o(.text) referenced from startup_fm33lc0xx.o(RESET)
+ <LI><a href="#[b]">ADC_IRQHandler</a> from adc.o(.text.ADC_IRQHandler) referenced from startup_fm33lc0xx.o(RESET)
  <LI><a href="#[19]">AES_IRQHandler</a> from startup_fm33lc0xx.o(.text) referenced from startup_fm33lc0xx.o(RESET)
  <LI><a href="#[22]">ATIM_IRQHandler</a> from startup_fm33lc0xx.o(.text) referenced from startup_fm33lc0xx.o(RESET)
  <LI><a href="#[1e]">BSTIM_IRQHandler</a> from startup_fm33lc0xx.o(.text) referenced from startup_fm33lc0xx.o(RESET)
@@ -295,14 +295,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(RESET)
 </UL>
-<P><STRONG><a name="[b]"></a>ADC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_fm33lc0xx.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(RESET)
-</UL>
 <P><STRONG><a name="[19]"></a>AES_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_fm33lc0xx.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AES_IRQHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AES_IRQHandler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(RESET)
 </UL>
 <P><STRONG><a name="[22]"></a>ATIM_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_fm33lc0xx.o(.text))
@@ -397,7 +394,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_lmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[c7]"></a>_ll_mul</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, llmul.o(.text), UNUSED)
@@ -406,7 +403,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[c8]"></a>_ll_udiv</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, lludiv.o(.text), UNUSED)
@@ -447,7 +444,7 @@ Global Symbols
 <P><STRONG><a name="[87]"></a>__aeabi_d2f</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, d2f.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_d2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[cd]"></a>__truncdfsf2</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, d2f.o(.text), UNUSED)
@@ -459,7 +456,7 @@ Global Symbols
 <P><STRONG><a name="[8a]"></a>__aeabi_dadd</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, daddsub.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[55]"></a>_dadd</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, daddsub.o(.text), UNUSED)
@@ -470,7 +467,7 @@ Global Symbols
 <P><STRONG><a name="[86]"></a>__aeabi_dsub</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, daddsub.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_dsub
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[d0]"></a>__subdf3</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, daddsub.o(.text), UNUSED)
@@ -490,7 +487,7 @@ Global Symbols
 <P><STRONG><a name="[89]"></a>__aeabi_ddiv</STRONG> (Thumb, 0 bytes, Stack size 64 bytes, ddiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __aeabi_ddiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[d2]"></a>__divdf3</STRONG> (Thumb, 0 bytes, Stack size 64 bytes, ddiv.o(.text), UNUSED)
@@ -517,13 +514,13 @@ Global Symbols
 <P><STRONG><a name="[5e]"></a>__aeabi_ui2d</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dflti.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d_normalise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[d4]"></a>_dfltu</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflti.o(.text), UNUSED)
 
 <P><STRONG><a name="[88]"></a>__aeabi_f2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -701,6 +698,9 @@ Global Symbols
 
 <P><STRONG><a name="[de]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
+<P><STRONG><a name="[b]"></a>ADC_IRQHandler</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, adc.o(.text.ADC_IRQHandler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(RESET)
+</UL>
 <P><STRONG><a name="[93]"></a>FL_ADC_CommonInit</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, fm33lc0xx_fl_adc.o(.text.FL_ADC_CommonInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = FL_ADC_CommonInit
 </UL>
@@ -722,9 +722,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vrefint_data
-<LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IRQHandler
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_HardwareReset
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -734,14 +732,16 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vrefint_data_IRQ
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_WriteByte
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Stop
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Start
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_click_500us
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_click
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;play_beep
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[95]"></a>FL_EXTI_CommonInit</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, fm33lc0xx_fl_exti.o(.text.FL_EXTI_CommonInit))
@@ -790,10 +790,10 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(RESET)
 </UL>
-<P><STRONG><a name="[82]"></a>GetTS_POLL</STRONG> (Thumb, 288 bytes, Stack size 40 bytes, temp.o(.text.GetTS_POLL))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GetTS_POLL &rArr; __aeabi_ddiv
+<P><STRONG><a name="[82]"></a>GetTS_IRQ</STRONG> (Thumb, 292 bytes, Stack size 40 bytes, temp.o(.text.GetTS_IRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GetTS_IRQ &rArr; __aeabi_ddiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vrefint_data
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vrefint_data_IRQ
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
@@ -947,22 +947,24 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_fm33lc0xx.o(.text)
 </UL>
-<P><STRONG><a name="[9d]"></a>adc_get_channel_voltage</STRONG> (Thumb, 284 bytes, Stack size 40 bytes, adc.o(.text.adc_get_channel_voltage))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = adc_get_channel_voltage &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[9d]"></a>adc_get_channel_voltage</STRONG> (Thumb, 184 bytes, Stack size 32 bytes, adc.o(.text.adc_get_channel_voltage))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = adc_get_channel_voltage &rArr; get_vrefint_data_IRQ &rArr; FL_DelayUs
 </UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vrefint_data_IRQ
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lmul
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vbat
 </UL>
 
-<P><STRONG><a name="[83]"></a>get_vrefint_data</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, adc.o(.text.get_vrefint_data))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = get_vrefint_data &rArr; FL_DelayMs &rArr; FL_DelayUs
+<P><STRONG><a name="[83]"></a>get_vrefint_data_IRQ</STRONG> (Thumb, 168 bytes, Stack size 32 bytes, adc.o(.text.get_vrefint_data_IRQ))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = get_vrefint_data_IRQ &rArr; FL_DelayUs
 </UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 </UL>
 
 <P><STRONG><a name="[4a]"></a>main</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, main.o(.text.main))
@@ -970,7 +972,7 @@ Global Symbols
 <LI>Call Chain = main &rArr; MF_Config_Init &rArr; MF_GPIO_Init &rArr; FL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayMs
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowText
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_SetCursor
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
@@ -1011,7 +1013,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9e]"></a>vbat</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, batt.o(.text.vbat))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = vbat &rArr; adc_get_channel_voltage &rArr; __aeabi_uldivmod
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = vbat &rArr; adc_get_channel_voltage &rArr; get_vrefint_data_IRQ &rArr; FL_DelayUs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_get_channel_voltage
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
@@ -1023,7 +1025,7 @@ Global Symbols
 
 <P><STRONG><a name="[7b]"></a>__aeabi_uidiv</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text_divfast))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_DelayUs
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_POLL
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTS_IRQ
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FL_EXTI_Init
 </UL>
