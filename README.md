@@ -1,6 +1,17 @@
 # HFS-P3_DevKit
 Developping Kit and resources gathered while reverse engineering the chinese HFS-P3 radiation dosimeter pen.
 
+##### The state of the current project can:
+-   control the OLED over bit-banged I2C 
+-   blink LEDs
+-   use buttons GPIO inputs
+-   control Buzzer (clicks and beeps)
+-   use interrupts
+-   enable/disable HV multiplier for GM tube
+-   measure counts from GM Tube
+-   sample battery voltage
+-   sample internal temperature
+
 https://github.com/user-attachments/assets/4a36b4d5-3909-4819-be21-2b176fe915f6
 
 :point_down: <sub>Eeach section can be expanded</sub> :point_down:
