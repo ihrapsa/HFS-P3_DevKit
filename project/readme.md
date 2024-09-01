@@ -24,11 +24,12 @@ This is a Keil uVision project with the base generated on [MFANG online platform
 
 
 Currently I can:
--   control the OLED over bit-banged I2C (WIP- needs more polishing)
+-   control the OLED over bit-banged I2C 
 -   blink LEDs
 -   use buttons GPIO inputs
--   control Buzzer
-
+-   control Buzzer (clicks and beeps)
+-   sample battery voltage
+-   sample internal temperature
 
 https://github.com/user-attachments/assets/4a36b4d5-3909-4819-be21-2b176fe915f6
 

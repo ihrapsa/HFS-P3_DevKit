@@ -167,6 +167,8 @@ void MF_ADC_Sampling_Init(void)
 
     FL_ADC_Init(ADC, &Sampling_InitStruct);
 
+		FL_ADC_EnableSequencerChannel(ADC, FL_ADC_INTERNAL_TS);
+		
     FL_ADC_EnableSequencerChannel(ADC, FL_ADC_INTERNAL_VREF1P2);
 
     FL_ADC_EnableSequencerChannel(ADC, FL_ADC_EXTERNAL_CH9);    

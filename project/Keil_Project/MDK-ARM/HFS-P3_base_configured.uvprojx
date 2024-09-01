@@ -480,6 +480,36 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\gpio_interrupt.h</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\adc.h</FilePath>
+            </File>
+            <File>
+              <FileName>batt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\batt.c</FilePath>
+            </File>
+            <File>
+              <FileName>batt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\batt.h</FilePath>
+            </File>
+            <File>
+              <FileName>temp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\temp.c</FilePath>
+            </File>
+            <File>
+              <FileName>temp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\temp.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -29,6 +29,10 @@
 #include "oled_draw.h"
 #include "gpio_interrupt.h"
 
+#include "adc.h"
+#include "batt.h"
+#include "temp.h"
+
 /**    
 * Chip Series: FM33LC0xx;
 * FL Version: v2.3;
@@ -56,15 +60,33 @@ int main(void)
 		//OLED_Clear(); //Already in OLED_Init()
 		
 		/*Show something on oled */
-		OLED_SetCursor(15, 15);
-		OLED_ShowText("Hecked ",7);
-		OLED_ShowText("Hecked ",7);
-		OLED_ShowText("Hecked ",7);
-		OLED_ShowText("150mSv/h ",7);
-		OLED_WriteDataList(skull, sizeof(skull));
-		
+//		OLED_SetCursor(15, 15);
+//		OLED_ShowText("Hecked ",7);
+//		OLED_ShowText("Hecked ",7);
+//		OLED_ShowText("Hecked ",7);
+//		OLED_ShowText("150mSv/h ",7);
+//		OLED_WriteDataList(skull, sizeof(skull));
+//		
     while(1)
     {
+			// Get Battery Voltage
+			float BattVoltage = vbat();
+			char VoltageStr[10];
+			snprintf(VoltageStr, sizeof(VoltageStr), "%.3f V", BattVoltage);
+			
+			OLED_Clear();
+			OLED_SetCursor(15, 15);
+			OLED_ShowText(VoltageStr ,7);
+			
+			// Get Internal Temperature
+			
+			float GetT = GetTS_POLL();
+			char TempStr[10];
+			snprintf(TempStr, sizeof(TempStr), "%.2f *C", GetT);
+			
+			OLED_SetCursor(15, 25);
+			OLED_ShowText(TempStr ,7);
+			FL_DelayMs(3000);
 			
     }
 

@@ -1,5 +1,4 @@
-./objects/main.o: ..\Src\main.c ..\Inc\main.h \
-  ..\MF-config\Inc\mf_config.h \
+./objects/temp.o: ..\Src\temp.c ..\Inc\temp.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_conf.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_adc.h \
@@ -35,7 +34,5 @@
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_u7816.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_uart.h \
   ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_vref.h \
-  ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h \
-  ..\Inc\fm33_assert.h ..\Inc\leds.h ..\Inc\inputs.h ..\Inc\outputs.h \
-  ..\Inc\buzzer.h ..\Inc\oled_i2c.h ..\Inc\oled_draw.h \
-  ..\Inc\gpio_interrupt.h ..\Inc\adc.h ..\Inc\batt.h ..\Inc\temp.h
+  ..\Drivers\FM33LC0xx_FL_Driver\Inc\fm33lc0xx_fl_wwdt.h ..\Inc\adc.h \
+  ..\Inc\main.h ..\MF-config\Inc\mf_config.h ..\Inc\fm33_assert.h
